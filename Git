@@ -83,6 +83,14 @@ Thực hành.
 	Gộp nhánh ( cập nhật)
 		git merge tên nhanh 
 		
+	Liệt kê các branch trong repo 
+		git branch 
+	Xóa một branch
+		git checkout -d tên nhánh 
+		
+	Phân biệt git pull và git fetch
+		git pull sẽ cập nhật thay đổi từ remote về local và đồng bộ hóa các source code 
+		git fetch thì cập nhật metadata ( git remote có những branch nào và có những thay đổi nào từ remote mà local chưa được cập nhật ).
 		
 		
 		
