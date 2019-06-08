@@ -85,3 +85,22 @@ VLAN.
 		Trunk là một đường chuyền chung kết nối các VLAN giữa 2 hay nhiều Switch khác nhau.
 		Kỹ thuật được dùng : Chèn thêm thông tin vào Ethernet frame khi đi qua Trunk để nó biết thuộc VLAN nào.
 		
+		
+Cấu hình 
+	VLAN 
+		vlan 3(id của vlan )   vlan mặc định là vlan 1
+		name tên vlan 
+		interface range fa0/1-5 
+		switchport access vlan     : cho các cổng truy cập vào vlan 
+		#show vlan  : show các vlan trong switch 
+	Trunk
+		tạo vlan
+		interface cổng trunk
+		switchport access vlan ?  : cho cổng truy cập vào vlan 
+		switchport trunk native vlan (vlan có cổng trunk )  tạo một cổng trunk cho các vlan gửi tin 
+		switchport trunk allowed vlan all : cho tất cả các vlan đi qua cổng trunk 
+		interface (có chứa cổng trunk)
+		switchport mode trunk : chuyển chế độ cổng sang trunk 
+		
+		
+		

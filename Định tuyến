@@ -6,6 +6,9 @@
 				 Phù hợp với mạng nhỏ.
 	Default router : Được sử dụng để cấu hình đường ra internet .
 	
+	
+
+	
 Khuyên dùng định tuyến tĩnh trong các trường hợp sau :
 			Đường chuyền có băng thông thấp.
 			Người quản trị cần kiểm soát các kết nối.
@@ -43,7 +46,7 @@ Các dạng định tuyến :
 			  truyền cho các router liền kề khác của nó.
 			  Rip sử dụng metric = hop-count để tính đường đi tối ưu nhất. Metric max =15 tương đương 15 router kết nối với nhau.
 			  
-			  
+		
 	B.OSPF.
 
 		OSPF là giao thức định tuyến trạng thái liên kết 
@@ -68,5 +71,21 @@ Các dạng định tuyến :
 		Giao thức do cisco phát triển và chỉ chạy được trên các thiết bị của cisco.
 		EIRGP là giao thức định tuyến lai giữa Distance-vecter và Link-state.
 		
+		
+Cấu hình 
+	
+	Cấu hình static 
+		ip route (ip mạng thêm vào ) (netmask của ip mạng ) (ip đich tới  hoặc tên cổng ra)
+	Cấu hình default
+		ip route 0.0.0.0 0.0.0.0 (ip đích tới hoặc tên cổng ra )
+	
+	Cấu hình rip
+	    route rip 
+		version 2
+		network các mạng 
+		network các mạng 
+			no auto-summary : không gộp các mạng vào 
+			  
+			  
 		
 			  

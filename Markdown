@@ -30,6 +30,7 @@ Markdown
 						2. không thường xuyên
 		Trích dẫn 
 			> trích dẫn 
+			Enter để tách dòng .
 		Mã code
 			inline code: dùng kí tự ` 
 				vd `code`
