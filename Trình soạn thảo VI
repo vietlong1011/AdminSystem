@@ -1,0 +1,92 @@
+VI 
+	VI là một bộ ( trình )chỉnh sửa các file trong linux được ưa dùng nhất vì VI sử dụng ít tài nguyên và được cài đặt mặc định trong linux.
+	VI có 2 chế độ làm việc chính:
+		Chế độ lệnh (command mode): ở chế độ này chúng ta có thể lưu file, chạy lệnh, di chuyển con trỏ.........
+									Mỗi gì bạn gõ ra, hệ thống sẽ coi dó là một lệnh.
+		Chế độ chèn (insert mode) : ở chế độ này chúng ta có thể chèn vào văn bản.
+									Mỗi gì bạn gõ , hệ thống đều hiểu đó là dữ liệu vào và đặt nó ở trong file.
+									
+Các lệnh cơ bản trong VI.
+	Đổi tên file trong VI. :w Tênfile
+	Lệnh di chuyển con trỏ:  h chuyển con trỏ sang trái một kí tự
+							 l chuyển con trỏ sang phải một kí tự
+							 j chuyển con trỏ xuống dưới 1 hàng
+							 k chuyển con trỏ lên trên một hàng
+							 
+							$ di chuyển con trỏ xuống cuối dòng.
+							0 hoặc | di chuyển con trỏ lên đầu dòng.
+							b chuyển con trỏ đến từ trước nó 1 từ
+							w chuyển con trỏ đến từ trước sau 1 từ
+							1G di chuyển con trỏ tới dòng đầu tiên của file
+							G di chuyển con trỏ tới dòng cuối cùng của file
+							(n)G di chuyển con trỏ tới dòng thứ n của file 
+							
+							
+							H di chuyển con trỏ tới đầu màn hình
+							L di chuyển con trỏ tới cuối màn hình 
+							M di chuyển con trỏ tới giữa màn hình
+							(n)H di chuyển con trỏ tới dòng n tính từ đầu màn hình 
+							(n)L di chuyển con trỏ tới dòng n tính từ cuối màn hình.
+							
+	Hiển thị số dòng - và tắt hiển thị số dòng tron VI.
+							:set nu   	 là hiển thi số dòng.
+							:set nonu 	 là tắt hiển thị số dòng.
+							
+	Di chuyển màn hình :  Ctrl u  la di chuyen len tren 1/2 trang
+						  Ctrl d la di chuyen xuong duoi 1/2 trang
+						  Ctrl b la di chuyen len tren 1 trang
+						  Ctrl f la di chuyen xuong duoi 1 trang 
+							 
+	Xóa kí tự và xóa dòng   x  xóa một kí tự
+							dw xóa một từ
+							dd xóa một dòng
+							
+	Khôi phục :  u để quay lại thay đổi trước đó
+	
+	Coppy-paste :	yy   coppy dong hien tại
+					p    dán vào dòng dưới 
+					P (p in hoa) dán vào trước con trỏ.
+					
+	Thao tác với tên file :
+							:w filename  lưu tên mới của file 
+							:f filename  đổi tên mới cho file 
+							
+							
+	Tìm kiếm chuỗi trong vi: 
+							/ chuoicantim  tìm từ trên xuống dưới.
+							? chuoicantim  tim tu duoi len tren.
+							Nhấn n để di chuyển tới các vị trí tiếp theo.
+							
+	Thay thế trong vi :
+						:s/chuoi cũ/chuoi moi/g    thay đổi chuỗi cũ bằng chuỗi mới trong phạm vi 1 dòng.
+						:%s/chuoi cu/chuoi moi/g    thay đổi chuoxi cũ thành chuỗi mới trong phạm vi toàn file .
+	
+	
+						
+Cấu hình ip tĩnh trên CenOS 7.
+	Câu lệnh truy cập cài đặt:
+					cd /etc/sysconfig/network-scripts/
+	Lấy tên các card mạng :
+					ls
+	Dùng trình soạn thảo vi để chỉnh sửa:
+				Device : thiết bị 
+				BOOTPROTO : cấu hình ip tĩnh  để static còn cấu hình động thì để dhcp
+				ONBOOT : yes để khởi động cùng hệ thống 
+				IPADDR : đặt ip tĩnh 
+				NETMASK : subnet mask được sử dụng 
+				Gateway : địa chỉ cổng gateway
+				DNS : địa chỉ DNS server.
+					
+					vd:
+						DEVICE=ens33
+						BOOTPROTO=static
+						ONBOOT=yes
+						IPADDR=192.168.73.3
+						NETMASK=255.255.255.0
+						GATEWAY=192.168.73.2
+						DNS1=8.8.8.8
+						DNS2=8.8.4.4
+	Khởi động lại card mạng.
+				systemctl restart network 
+	
+Note: nên để 2 DNs là 8.8.8.8 và 8.8.8.4 vì sau này cài DNS server sẽ ko cài được nếu chỉ dùng 1 DNS

@@ -1,0 +1,19 @@
+Các bắt các gói tin tcpdum và wireshark trên ubuntu
+	1.Cài đặt ip động trên ubuntu
+		a. truy cập vs quyền sudo
+			sudo nano /etc/network/interfaces
+		b. sủa thông số trong file
+			auto eth1 : card mạng sẽ tự được khởi động cùng hệ thống
+			iface eth1 inet dhcp : card mạng đã được cấu hinh dhcp 
+	2. Cài đặt wireshark
+		1. 
+			sudo add-apt-repository ppa:wireshark-dev/stable
+		2.
+			sudo apt-get update
+		3. 
+			sudo apt-get install wireshark 
+	3. Cài dặt tcpdump trên ubuntu
+		sudo apt-get install tcpdump
+	4. Bắt gói tin  bằng tcpdump  lưu vài file pcap
+		sudo tcpdum -w ten.pcap -i cardmang
+	5. Mởi gói tin pacap bằng wireshark

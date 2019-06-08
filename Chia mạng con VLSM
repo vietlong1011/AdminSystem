@@ -1,0 +1,87 @@
+IPv4
+	IPv4 là phiên bản thứ 4 của giao thức IP trong bộ trồng giao thức TCP/IP
+	Giao thức IP hoạt động ở tầng thứ 3( Network) trong mô hình OSI và ở tầng Internet trong mô hình TCP/IP
+	
+	Cấu trúc IPv4
+		Địa chỉ IPv4 gồm 32 bit nhị phân ,được chia là 4 cụm 8 bit(gọi là các Octet). Các octet được biểu diễn bởi số thập phân và ngăn cách nhau bởi dấu chấm.
+		Địa chỉ IP được chia làm hai phần phần mạng(network) và phần host
+			Đặt địa chỉ IP tuân thủ theo các quy tắc:
+				Các bit mang không được phép đồng thời bằng không.
+				Nếu các bit host đồng thời bằng 0 thì đó là địa chỉ mạng.
+				Nếu các bit host đồng thời bằng 1 thì đó là địa chỉ broadcast.
+	
+	
+	Các lớp trong IPv4
+		
+		A. Lớp A
+			Địa chỉ lớp A sử dụng 1 octet làm network và 3 octet còn lại là phần host
+			Bit đầu của lớp A luôn giũa là 0
+			Các địa chỉ mạng của lớp A  từ 1.0.0.0 -> 126.0.0.0
+			Địa chỉ 127.0.0.0 là địa chỉ loopback
+			Phần host có 24 bit ==> Mỗi mạng trong lớp A sẽ có (2 mũ 24 – 2) host.
+		B.Lớp B
+			Địa chỉ lớp B sử dụng 2 octet làm network và 2 octet còn lại làm phần host
+			Hai bit đầu của lớp B luôn là 1 0
+			Các địa chỉ mạng của lớp B từ 128.0.0.0 -> 191.255.0.0
+			Phần host của lớp B có 16 bit ==> mỗi mạng trong lớp B sẽ có (2 mũ 16 -2) host
+		C.Lớp C 
+			Địa chỉ lớp C sử dụng 3 octet để làm network và 1 octet còn lại làm phần host
+			Ba bit đầu cua lớp C luôn là 1 1 0
+			Các địa chỉ mạng của lớp C từ 192.0.0.0-> 223.255.255.0
+			Phần host của lớp C có 8 bit ==> mỗi mạng trong lớp C sẽ có (2 mũ 8 -2) host
+		D.Lớp D
+			Địa chỉ của lớp D gồm các địa chỉ thuộc dải: 224.0.0.0 -> 239.255.255.255
+			Được sử dụng làm địa chỉ multicast.
+		E.Lớp E
+			Địa chỉ của lớp E gồm địa chỉ từ 240.0.0.0 trở đi
+			Dùng cho mục đích dự phòng.
+		
+	Địa chỉ Private và địa chỉ Public
+		Đại chỉ Private sử dụng trong mạng nội bộ (mạng LAN), không được định tuyến trên môi trường internet.Và có thể được sử dụng lại trong các mạng LAN khác nhau.
+		Địa chỉ Public sư dụng trong mạng internet, được định tuyến. Mỗi địa chỉ mạng public là duy nhất cho mỗi host khi tham gia mạng.
+		Dải địa chỉ private (được quy định trong RFC 1918):
+
+		Lớp A: 10.x.x.x
+		Lớp B: 172.16.x.x -> 172.31.x.x
+		Lớp C: 192.168.x.x
+		
+		Kỹ thuật NAT (Network Address Translation) được sử dụng để chuyển đổi giữa IP private và IP public.
+		Ý nghĩa của địa chỉ private: được sử dụng để bảo tồn địa chỉ public.	
+
+	Địa chỉ Broadcast
+		IP 192.168.2.1
+		Direct Broadcast: vd: 192.168.1.255			: Gửi thông điệp tới tất cả các host trong mạng 192.168.1.0 .
+		Local Broadcast:  vd:255.255.255.255		: Gửi thông điệp tới tất cả các host trong mạng 192.168.2.0 .
+		
+	Subnet mask
+		Subnet mask là một dãy nhị phân gồm 32 bit đi kèm theo địa chỉ IP để xác định phần network trong IP đó.
+		
+		
+	
+Chia mạng con VLSM.
+	Số subnet ( số mạng con mới được tạo ra): 2 mũ n (n là số bit mượn hostID)
+	Số host được  tạo ra :  2 mũ m -2 ( m là số bit hostID còn lại )
+	Bước nhảy : 2 mũ  m .
+	Số bit của subnet mới = số subnet mask cũ cộng n.
+		
+
+
+VLAN.
+	VLAN mạng Lan ảo. VLAN là một miền quảng bá được tao ra từ Switch .
+	Bình thường thì Router sẽ tạo miền quảng bá, nhưng trong VLAN Switch có thể tạo ra miền quảng bá.
+	VLAN cho phép tổ chức mạng theo địa chỉ logic chứ không theo địa chỉ vật lý nhờ đó có ưu điểm:
+		Tính linh hoạt cao: Có thay đổi, sửa xóa thêm , thay đổi vị trí người sử dụng mạng một cách linh hoạt 
+		Hạn chế quảng bá, tiết kiệm băng thông của mạng : Kiểm soát phạm vi hoạt động của tin broadcast.
+		Thắt chặt vấn đề an ninh mạng 
+		Vượt qua dào cản vật lý
+		
+	Phân loại VLAN:
+		Port based VLAN : Mỗi cổng của Switch đều thuộc một VLAN nào đó.
+		Mac address based VLAN : Mỗi địa chỉ MAC được đánh dấu thuộc một VLAN nào đó.
+		Protocol based VLAN : Mỗi một địa chị IP/Mac xác định trong mạng sẽ thuộc một VLAN .
+		
+		
+	Trunking :
+		Trunk là một đường chuyền chung kết nối các VLAN giữa 2 hay nhiều Switch khác nhau.
+		Kỹ thuật được dùng : Chèn thêm thông tin vào Ethernet frame khi đi qua Trunk để nó biết thuộc VLAN nào.
+		

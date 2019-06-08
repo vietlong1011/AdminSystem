@@ -1,0 +1,153 @@
+Phân loại mạng máy tính:
+	Theo vị trí địa lý (diên hoạt đông)
+		Pan (Personal area network): Mạng cá nhân
+			Được sử dụng trong phạm vi gia đình.
+		Lan (Local area network): Mạng cục bộ, có bán kính hoạt động dưới 10km.
+			Được sử dụng trong phạm vi giữa các phòng ban trong tòa nhà.
+		Man (Metropolitan  area network): Mạng đô thị
+			Được sử dụng trong phạm vi thành phố.
+		Wan (Wide area network): Mạng diện rộng , có bán kính hoạt động trên 100km.
+			Được sử dụng trong phạm vi rộng như giữa tỉnh/thành phố, quốc gia.	
+		Gan (Global area network): Mạng toàn cầu
+			Được sử dụng trong phạm vi toàn cầu.
+		San (Storage area network): Mạng lưu trữ
+	Theo topo(mô hình ghép nối mạng).
+		Mô hình điểm(point to point): Gồm nhiều nút, mỗi nút chỉ có thể liên lạc được với nút liền kề thông qua đường truyền trực tiếp.
+									  Nếu liên lạc là các nút không liền kề, ta buộc phải liên lạc gián tiếp thông qua các nút liền kề với mình.
+									  Sau đó dữ liệu sẽ được chuyển tuần tự qua các nút tới đích cần nhận.
+			Star(hình sao):
+				Tất cả các divice kết nối trực tiếp với một hub xử lý trung tâm.Để có thể truyền thông được cho nhau, tất cả dữ liệu phải được gửi lên hub.
+			Tree(cây):
+				Mô hình phân cấp gồm nhiều gốc hay nhiều hub.
+		Mô hình điểm - nhiều điểm(broadcast):Các nút dùng trung một kênh chuyền .Các máy không phải là đích sẽ bỏ qua thông điệp.
+			Bus:Các divice kết nối với một kênh truyền chung đồng trục.
+			Ring: Các divice kết nối với nhau trên kênh truyền tạo thành một vòng tròn.
+			Vệ tinh:
+	Theo đường truyền thông hoặc cách mà dữ liệu được truyền đi.
+		Mạng chuyển mạch ảo( circuit-switched):
+			Thiết lập đường truyền vật lý trước khi gửi thông tin đi. Mạch này tồn tại trong suốt quá trình truyền đữ liệu.
+		Mạng chuyển mạch gói(packet-switched network):
+			Thông điệp sẽ được chia nhỏ thành từng gói (packet). Các  packet lần lượt gửi tới nút nhận thông qua các switch ( thiết bị chuyển mạch chung gian)
+			
+			
+Địa chỉ mạng, định tuyến, tính tin cậy, tính liên tác và an ninh mạng.
+	Đia chỉ(Address): Gán cho mỗi nút mạng một địa chỉ là duy nhât.
+	Routing- định tuyến: Định tuyến, xác định tuyến đường truyền dữ liệu từ nút gửi tới nút nhận.
+	Tính tin cậy: Tính toàn vẹn dữ liệu - Đảm bảo dữ liệu gửi đi giống hệ dữ liệu nhận được.
+	Tính liên tac: Khả năng tương tác phần mềm,phần cứng của các hãng khác nhau.
+	An ninh mạng: Bảo vệ mọi thứ trong mạng, bao gồm dữ liệu , phương tiện truyền thông và các thiết bị mạng.
+	
+	
+
+Mô hình OSI.
+	Kiến trúc phân tầng:
+		Kiến trúc hệ thống được chia đều thành các tâng, mỗi tầng sẽ có chức năng xác định.
+		Giao thức tầng: Xác định các mối quan hệ ngang hàng giữa các hệ thống truyền tin.
+		Giao diện tầng: quan hệ giữa các tầng liền kề nhau trong hệ thống.
+		Kết nối: Các hệ thống sẽ được kết nối trực tiếp qua đường truyền vật lý nằm ở tầng 1(thấp nhât) trong hệ thống.
+		
+		
+	Kiến trúc phân tầng (7 tầng của mô hình OSI) 
+		Tầng vật lý:Physical layer
+		Tầng liên kết dữ liệu: Datalink layer
+		Tầng mạng: Network layer
+		Tầng vận chuyển: Transport layer 
+		Tầng phiên: Session layer
+		Tầng trình duyệt: Presentation layer
+		Tầng ứng dụng: Application layer
+		===> phân tầng để đơn giản hóa cho việc phân tích thiết kế hệ thống.
+			Tạo khả năng modul hóa cao
+			Dễ dàng cho việc tiêu chuẩn hóa giao diện.
+			Gia tốc cho phát triển sau này.
+			
+	Chức năng của các tầng trong mô hình OSI.
+		1. Tầng vật lý (physical layer):
+			Đảm bảo các yêu cầu truyền dẫn các CHUỖI BIT thông qua các phương tiện vật lý.
+			Tầng vật lý liên quan đến:
+				Thiết bị giao tiếp và truyền gửi thông tin.
+				Biểu diễn bit: Mã hóa dữ liệu dữ liệu (các bit 0 1)trước khi gửi đi thành tín hiệu điện hoặc quang.
+				Tốc độ dữ liệu: Số bit được gửi đi trong một đơn vị thời gian.
+				Đồng bộ hóa các bit:  Máy gửi và máy nhận được đồng bộ hóa mức bit.
+				Cấu hình đường truyền: Point-to-point , multipoint.
+				Topo (mô hình ghép nối) vật lý: Bus,Star, Ring
+				Chế độ chuyền dẫn: Hướng dữ liệu sẽ được truyền đi.(Đơn công, bán song công, song công).
+		
+		2. Tầng liên kết (Datalink layer)
+			Chuyển đổi khung thông tin (frame) thành các chuỗi bit để chuyền và kiến tao lại các khung từ các bit được nhận ở tầng 1.
+			Tầng liên kết sẽ chịu trách nhiệm trong :
+				Framing- Đóng gói dữ liệu: Chia luồn các bit nhận được ở tầng mạng thành các đơn vị dữ liệu -frame.
+				Định địa chỉ vật lý: Gửi trong cùng một mạng, đánh địa chỉ vật lý nơi nhận và đầu frame.
+									 Gửi khác mạng, đánh địa chỉ các thiết bị trung gian kết nối tới mạng bên ngoài.
+				Kiểm soát lưu lượng: Nếu tốc độ nhận dữ liệu nhỏ hơn tốc độ nhận dữ liệu,
+									tầng liên kết sẽ kiểm soát lưu lượng tránh tình trạng quá tải dữ liệu tại noi nhận.
+				Kiểm soát lỗi :	Tầng liên kết tăng độ tin cậy của tầng vật lý bằng cách sử dụng kỹ thuật phát hiện và
+									truyền lại các frame bị lỗi , bị mất. Kiểm soát lỗi thường được thực hiện bằng cách thêm 
+									một trailer vào cuối mỗi frame.
+				Kiểm soát truy cập: Khi nhiều thiết bị cùng truy cập vào đường truyền, các giao thức ở tầng liên kết sẽ quyết định
+									thiết bị nào sẽ được sử dụng đường truyền ở thời điểm xác định.
+		
+		3. Tầng mạng (Network layer)
+			Thực hiện việc chọn đường và đảm bảo việc thực hiện truyền gửi tin giữa các mạng con trong mạng lớn , với công nghệ thích hợp.
+			Tầng mạng có nhiệm vu:
+				Định địa chỉ logic: Bổ sung tiêu đề có chứa địa chỉ logic của thiết bị nhận và thiết bị gửi vào mỗi gói dữ liệu được gửi đi.
+				Định tuyến: Xác định đường đi để dữ liệu tới được đích.
+		
+		4. Tầng giao vận (Transport layer) 
+			Chuyển toàn bộ thông điệp (dữ liệu) tới nơi nhận cách toàn vẹn.Kiểm soát thứ tự truyền, lưu lượng,phát hiện và sửa lỗi các gói dữ liệu.
+			Tầng giao vận chịu trách nhiệm: 
+				Địa chỉ cổng Port (Port number): Header được thêm vào tại tầng giao vận sẽ chứa tông tin về một kiểu địa chỉ- địa chỉ cổng hoặc địa chỉ tiến trình.
+				Phân mảnh và tái hợp nhất: Mỗi thông điệp sẽ được chia thành các segment nhỏ , được truyền độc lập với nhau.Mỗi segment được đánh số tứ tự ,để
+											tầng giao vận có thể ghép các segment lại thành các thông điệp hay phát hiện mất mát segment khi truyền tin.
+				Kiểm soát lỗi:  Có hướng nối- không hướng nối.
+								Có hướng nối: thiết lập kết nối với tầng giao vận của máy nhận trước khi gửi dữ liệu. Sau khi quá trình gửi dữ liệu hoàn thành, 
+											  kết nối đó sẽ được giải phóng.
+								Không hướng nối: sẽ gửi các segment độc lập tới tần giao vận của máy nhận.
+				Kiểm soát lưu lượng: Kiểm soát lưu lượng ở thiết bị đầu cuối .
+				Kiểm soát lỗi: Thực hiện kiểm soát lỗi tại thiết bị đầu  cuối.
+			
+		5. Tầng phiên (Session):
+			Quản lý các cuộc liên lạc giữa các thực thể bằng cách thiết lập, duy trì, đồng bộ và hủy bỏ các phiên truyền thông giữa các ứng dụng.
+			Tầng phiên chịu trách nhiệm: 
+				Kiểm soát hội thoại: Cho phép truyền thông tin theo chế độ bán song công hoặc song công .
+				Đồng bộ hóa: Tầng phiên cho phép một tiến trình thêm vào các mốc (synchronization point- điểm đồng bộ) vào luồng dữ liệu.
+				
+		6. Tầng trình diễn (Presentation):
+			Biểu diễn cú pháp và ngữ nghĩa các thông tin được trao đổi giữa hai hệ thống.
+			Tầng trình diễn chịu trách nhiệm: 
+				Phiên dịch (Translation): Tầng trình diễn ở máy gửi sẽ biểu diễn thông tin khuân dạng của mình thành khuân dạng chung.Tầng trình diễn ở máy nhận 
+										  sẽ biểu diễn khuân dạng chung nhận được thành khuân dạng của mình.
+				Mã hóa :Phía gửi sẽ mã hóa thông tin dạng ban đầu, và phía nhận có chức năng giải mã để lấy được thông tin dạng ban đầu:
+				Nén : Nén dữ liệu, giảm số lượng bit trên đường truyền.
+				
+		7.Tầng ứng dụng (Application):
+			Cung cấp các dịch vụ, ứng dụng trên mạng cho người sử dụng qua môi trường OSI.
+			Tầng ứng dụng cung cấp các dịch vụ:
+				Thiết bị đầu cuối ảo của mạng: 
+				Quản lý ,truy cập và chuyển file:
+				Các dịch vụ khác:
+				
+Bộ giao thức TCP/IP
+			Bộ giao thức TCP/IP được sử dụng trên internet.
+			TCP/IP là một mô hình phụ thuộc vào giao thức, còn OSI là một chuẩn giao thức độc lập.
+			TCP/IP được coi là một lựa chọn đáng tin cậy hơn so với mô hình OSI. 
+				Trong hầu hết các trường hợp, mô hình OSI được gọi là công cụ tham khảo, là mô hình cũ. 
+				OSI cũng được biết đến với giao thức và ranh giới chặt chẽ. TCP/IP cho phép “nới lỏng” các quy tắc, cung cấp các nguyên tắc chung được đáp ứng.
+				
+				
+Mô hình TCP/IP gồm 4 tầng, tương ứng với mô hình OSI như sau:
+			Application: Application-Presentation-Session
+			Transport: Transport
+			Internet: Network
+			Network access: Datalink- Physical.
+			
+		
+				
+			
+				
+				
+			
+				
+		
+		
+
+	

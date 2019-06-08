@@ -1,0 +1,72 @@
+Định tuyến tĩnh:
+	Ưu điểm : Sử dụng bandwidth ít hơn định tuyến động.
+			  Không tốn nhiều tài nguyên để tính toán và phân tích gói tin định tuyến.
+	Nhược điểm : Không có khả năng tự cập nhật đường đi .
+				 Phải cấu hình thủ công khi mạng có sự thay đổi.
+				 Phù hợp với mạng nhỏ.
+	Default router : Được sử dụng để cấu hình đường ra internet .
+	
+Khuyên dùng định tuyến tĩnh trong các trường hợp sau :
+			Đường chuyền có băng thông thấp.
+			Người quản trị cần kiểm soát các kết nối.
+			Đường dự phòng cho các kết nối dùng định tuyến động.
+
+Định tuyến động :
+	Các router sẽ tự trao đổi thông tin với nhau .
+	Ưu điểm : Tự tìm ra được đường đi khi thay đổi cấu hình mạng
+			  Dễ dàng cấu hình.
+	Nhược điểm : Yêu cầu xử lý CPU cao hơn so với định tuyến tĩnh 
+				 Tiêu tốn băng thông để định tuyến 
+				 
+				 
+Các dạng định tuyến :
+	Định tuyến nội IGP( interior gateway protocol) : Cho phép các router trong một AS gửi tin cho nhau.
+	Định tuyến ngoại EGP ( exterior gateway protocol) : cho phép hai router ở hai AS gửi tin với nhau một cách tối ưu nhất ( lựa chọn router tốt nhất ).
+	AS : Autonomous System  là hệ thống tập hợp các router có cùng chính sách định tuyến.
+	
+	
+	IGP được chia làm 2 nhóm :
+		Distance-vecter : Router sẽ bị chi phối bởi các router liền kề , không biết đầy đủ về mạng. Các router sẽ gửi router table cho router liền kề, các 
+						  router liền kề này sẽ cập nhập vào router table của mình và chuyển tiếp cho các router liền kề khác.
+						  Điển hình là RIP.
+		Link-state :  Router có cái nhìn riêng và đầy đủ về hệ thống mạng. Router sẽ gửi bảng cơ sở trạng thái đường link cho các router cùng vùng area.
+					  Việc tính toán còn lại được thực hiện bằng giải thuật Dijkstra.
+	
+	Câu lệnh No auto-summary : dùng trong EGP để không bị gộp các mạng định tuyến  lại thành mạng tổng nào đó.
+		vi du : Router tabe có các mạng : 192.168.1.0/24 192.168.2.0/24 192.168.3.0/24
+										 Nếu một pc khác ping tới ip 192.168.5.2 , mạng 192.168.5.0/24 không có trong router table
+										 nhưng vẫn ping đc. Bởi vì khi đó các network đã bị gộp thành mạng 192.168.0.0/24 và 192.168.5.0/24 là một mạng con trong
+										 mạng vừa được gộp đó.
+	
+	A. RIPv2.
+		RIP : Định tuyến vecter khoảng cách. Router sẽ gửi routing table của mình cho các router liền kề. Các router liền kề sẽ lưu thông tin có và lan 
+			  truyền cho các router liền kề khác của nó.
+			  Rip sử dụng metric = hop-count để tính đường đi tối ưu nhất. Metric max =15 tương đương 15 router kết nối với nhau.
+			  
+			  
+	B.OSPF.
+
+		OSPF là giao thức định tuyến trạng thái liên kết 
+		Ưu điểm : 
+			Biết được toàn bộ các topo mạng nên sẽ tính toàn và tìm đường đi nhanh nhất với yêu cầu bài toán.
+		Nhương điểm :
+			Nếu thêm mới vào mạng nhiều router thì số lượng và tần số cập nhật thông tin sẽ lâu hơn , thời gian tính toán tìm đường cũng lâu hơn.
+			
+			AD=110
+			Metric= cost ?= Bandwidth(bang thông )
+			
+		Để kết nối 2 router để chúng hàng xóm với nhau :
+			Cùng area id
+			Cùng subnet/subnet mask
+			Cùng hello/dead-time
+			Thỏa mãn điều kiện xác thực 
+			Stuck area cùng bật hoặc cùng tắc
+			
+			Router id : Ip cao nhất trong các inteface active và ưu tiên cổng loopback.
+			
+	C.EIRGP
+		Giao thức do cisco phát triển và chỉ chạy được trên các thiết bị của cisco.
+		EIRGP là giao thức định tuyến lai giữa Distance-vecter và Link-state.
+		
+		
+			  
