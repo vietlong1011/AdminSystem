@@ -1,0 +1,51 @@
+Markdown
+	
+	1. Markdown là ngôn ngữ để soạn thảo trên wed
+		
+	2. Ngữ pháp cơ bản của Markdown
+		Tiêu đề:
+			h1,h2,h3 ...h6 được viết bằng cách thêm số # tương ứng vào đầu dòng.
+			vd: h1  -> #
+				h3 -> ###
+		Bôi đậm hoặc in nghiêng:
+			*in nghiêng*
+			**in in đậm**
+			***vừa in nghiêng vừa in đậm***
+				====> viêt liền các * và text bên trong 
+		Link:
+			[text](đường dẫn )	
+			vd: [thực hành](https://google.com)
+		Chèn ảnh:
+			![text](dường dẫn tới ảnh)
+			vd: ![ảnh](https://asdfjlalf.jpg)
+		Định dạng danh sách :
+			dùng 1 kí từ * và 1 dấu cách ở mỗi dòng 
+			dùng dùng 2 kí tự cách 1 kí tự * và 1 dấu cách ở đầu dòng nếu muốn thụt vào một level
+			dùng số để đánh dấu thì thay * bằng một số và chấm
+				vd: * ho va ten
+					  * tuoi
+					  * ngay thang
+					* dia chi 
+						1. hay luuwu chú
+						2. không thường xuyên
+		Trích dẫn 
+			> trích dẫn 
+		Mã code
+			inline code: dùng kí tự ` 
+				vd `code`
+			Block code : dùng 3 kí tự ```
+				vd ```code dòng 1
+						code dong 2
+						code dong 3 ```
+						
+		Table trong markdown
+			Dùng dấu | để ngăn giữa các colums.
+			Ngăn cách header và content  bằng kí tự -------  
+				------- căn lề trái
+				:------: căn giữa
+				-------: căn lề phải 
+			vd: | cot 1| cot 2| cot 3|
+				|------|:----:|-----:|
+				|han   | quoc |    la|
+				
+		
