@@ -87,7 +87,7 @@ Mô hình OSI.
 									thiết bị nào sẽ được sử dụng đường truyền ở thời điểm xác định.
 		
 		3. Tầng mạng (Network layer)
-			Thực hiện việc chọn đường và đảm bảo việc thực hiện truyền gửi tin giữa các mạng con trong mạng lớn , với công nghệ thích hợp.
+			Thực hiện việc chọn đường và đảm bảo việc thực hiện truyền gửi tin giữa các mạng con trong mạng lớn , với công nghệ chuyển mạch thích hợp.
 			Tầng mạng có nhiệm vu:
 				Định địa chỉ logic: Bổ sung tiêu đề có chứa địa chỉ logic của thiết bị nhận và thiết bị gửi vào mỗi gói dữ liệu được gửi đi.
 				Định tuyến: Xác định đường đi để dữ liệu tới được đích.
