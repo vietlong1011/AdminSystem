@@ -7,14 +7,15 @@
 #### 1. Sau khi cài đặt và khởi động apache trên máy chủ. Ta kiểm tra truy cập từ bên ngoài vào máy chủ web bằng cách ping trực tiếp tới máy chủ.
 - Nếu ping thành công sẽ hiện lên giao diện ..Testing 123....
 - Nếu không ping được vào webserver thì có thể máy chủ Centos 7 sử dụng firewall -cmd chặn truy cập cổng 80(HTTP) và 443(HTTPS) từ bên ngoài.Ta sẽ phải sử dụng lệnh để cho phép truy cập tới 2 port này từ bên ngoài
-``` 	firewall-cmd --premanent --zone=public --add-service=http
+```
+	firewall-cmd --premanent --zone=public --add-service=http
 	firewall-cmd --permanent --zone=public --add-service=https
 	firewall-cmd --reload 
 ```
 	- Sau đó thử connect lại với máy chủ.
 #### 2. Cấu hình Virtual Hosts 
 
-####2.1 Tạo thư mục cần thiết và phân quyền
+#### 2.1 Tạo thư mục cần thiết và phân quyền
 
 - Tạo thư mục 
 	- mkdir -p /var/www/test.com/pubic_html : chứa source code của website
@@ -25,14 +26,15 @@
 	- Phân lại quyền các thư mục vừa tạo từ root chuyển sang quyền của user apache hay chính là user quản trị website.
 	- chown -R apache:apache /var/www/test.com 
 	
-####2.2 Tạo Virtrual Host 
+#### 2.2 Tạo Virtrual Host 
 
 1. Mở file vi/etc/httpd/conf/httpd.conf thêm dòng lệnh:
 - NameVirtualHost *:80 
 2. Tạo file test.conf (tên.conf) trong thư mục conf.d :
 - mkdir /etc/httpd/conf.d/test.conf 
 3. Cấu hình file test.conf
-```	<VirtualHost *:80>
+```
+	<VirtualHost *:80>
 	ServerAdmin admin@test.com
 	ServerName test.com
 	ServerAlias www.test.com 
@@ -52,7 +54,7 @@
 4. Test cài đặt
 - Viết một file html trong thư mục public_html
 - Cấu hình cho apache khởi động cùng máy chủ systemctl enable httpd 
-- Dùng lệnh curl -I http://test.com 
+- Dùng lệnh curl -I http://test.com (- i in hoa)
 
 
 	
