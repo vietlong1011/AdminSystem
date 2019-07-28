@@ -39,7 +39,7 @@ Cấu hình DHCP trên CenOS 7.
 	Cài đặt DHCP cho hệ thống 
 		yum install -y dhcp 
 	Truy cập tới file cấu hình dhcp
-		cd /etc/
+		cd /etc/dhcp
 		Lấy tên file cấu hình dhcp 
 			ls | grep dhcp 
 		Truy cập vào file có chứa file cấu hình dhcp 
@@ -69,4 +69,16 @@ Cấu hình DHCP trên CenOS 7.
 		systemctl start/stop dhcpd 
 	Xem trạng thái và thông báo lỗi của DHCP
 		systemctl status dhcpd 
+
+  vd:
+	# creat new
+	authoritative;
+	default-lease-time 600;
+	max-lease-time 12000;
+	subnet 192.168.73.0 netmask 255.255.255.0{
+	range dynamic-bootp 192.168.73.4 192.168.73.90;
+	option broadcast-address 192.168.73.255;
+	option routers 192.168.73.2;
+	option domain-name-servers 8.8.8.8;	
+	}
 	

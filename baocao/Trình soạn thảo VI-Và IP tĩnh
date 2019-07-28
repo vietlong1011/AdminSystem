@@ -4,7 +4,9 @@ VI
 		Chế độ lệnh (command mode): ở chế độ này chúng ta có thể lưu file, chạy lệnh, di chuyển con trỏ.........
 									Mỗi gì bạn gõ ra, hệ thống sẽ coi dó là một lệnh.
 		Chế độ chèn (insert mode) : ở chế độ này chúng ta có thể chèn vào văn bản.
-									Mỗi gì bạn gõ , hệ thống đều hiểu đó là dữ liệu vào và đặt nó ở trong file.
+									Mỗi gì bạn gõ , hệ thống đều hiểu đó là dữ liệu vào và đặt nó ở trong 									file.	
+		Chuyển chế độ từ insert sang command dùng Esc
+		Chuyển từ command sang insert dùng a,i, insert
 									
 Các lệnh cơ bản trong VI.
 	Đổi tên file trong VI. :w Tênfile
@@ -50,6 +52,8 @@ Các lệnh cơ bản trong VI.
 	Thao tác với tên file :
 							:w filename  lưu tên mới của file 
 							:f filename  đổi tên mới cho file 
+							:wq  lưu file với thay đổi mới
+							:q! thoát và không lưu thay 
 							
 							
 	Tìm kiếm chuỗi trong vi: 
