@@ -2,7 +2,7 @@
 
 > Dùng lệnh ` ls -al ` để xem cấu trúc toàn bộ tập tin hoặc thư mục 
 
-![](./img/cau-truc-file.png)
+![](img/cau-truc-file.png)
 
 - ý nghĩa của từng chỉ số lần lượt từ trái sang là :
 	- Loại file (d có nghĩa là thư mục 
