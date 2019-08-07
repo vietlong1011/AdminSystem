@@ -3,6 +3,6 @@
 	- yum install -y httpd
 2. Khởi động và kích hoạt 
 	- systemctl restart httpd
-	- systemctl enable http
+	- systemctl enable httpd
 3. Xác nhận khởi động thành công
 	- ps aux|grep httpd

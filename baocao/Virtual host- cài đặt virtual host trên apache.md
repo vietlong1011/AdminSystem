@@ -19,7 +19,7 @@
 
 - Tạo thư mục 
 	- mkdir -p /var/www/test.com/pubic_html : chứa source code của website
-	- mkdir -p /var/www/test.com/logs : chứa các log của trang web
+	- mkdir -p /var/www/test.com/log : chứa các log của trang web
 	- mkdir -p /var/www/test.com/backup : chứa file backup định kì hoặc file cấu hình
 	
 - Phần quyền
@@ -31,7 +31,7 @@
 1. Mở file vi/etc/httpd/conf/httpd.conf thêm dòng lệnh:
 - NameVirtualHost *:80 
 2. Tạo file test.conf (tên.conf) trong thư mục conf.d :
-- mkdir /etc/httpd/conf.d/test.conf 
+- touch ten.conf
 3. Cấu hình file test.conf
 ```
 	<VirtualHost *:80>
@@ -39,8 +39,8 @@
 	ServerName test.com
 	ServerAlias www.test.com 
 	DocumentRoot /var/www/test.com/public_html/	
-	ErrorLog /var/www/test.com/logs/error.log 
-	CustomLog /var/ww/test.com/logs/access.log combined 
+	ErrorLog /var/www/test.com/log/error.log 
+	CustomLog /var/log/www/test.com/log/access.log combined 
 	</VirtualHost>
 ```
 - VirtualHost *:80 : port 80 được dùng cho trang web 
