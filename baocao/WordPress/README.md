@@ -1,1 +1,1 @@
-﻿[1.Tổng quan về WordPress](docs/WordPress.md)[2.Cài đặt WordPress](docs/Cài đặt.md)
+﻿﻿[1.Tổng quan về WordPress](docs/WordPress.md)[2.Cài đặt WordPress](docs/Cài_đặt_WordPress.md)
