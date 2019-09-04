@@ -61,13 +61,13 @@ sed -i -e 's/database_name_here/'$name_db'/' -e 's/username_here/'$user'/' -e 's
 
 
 # 6. Tạo db cho wordpress
-mysql -u root --password=$passroot<<taodb
+mysql -u root --password=$passroot<<taodb( tên script)
 create database $name_db ;
 create user '$name_user'@'localhost' identified by '$password';
 grant all privileges on $name_db.* to '$name_user'@'localhost';
 flush privileges ;
 exit
-taodb
+taodb( tên script)
 
 systemctl restart mysqld 
 systemctl restart httpd
