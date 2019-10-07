@@ -23,7 +23,7 @@ triển khai các dịch vụ HA( highavailibility ).
 
 ![](../images/1.png)
 
-* Hệ thống lưu trữ dựa trên đối tượng cho dữ liệu phi cấu trúc *
+*Hệ thống lưu trữ dựa trên đối tượng cho dữ liệu phi cấu trúc*
 
 - CEPH cung cấp 3 loại hình lưu trữ : Object storage , Block storage và File storage
 - Các server cài CEPH sẽ kết nối với nhau tạo thành Cluster
@@ -40,22 +40,22 @@ Thường các dữ liệu này sẽ là hình ảnh hay văn bản .........
 
 ![](../images/3.png)
 
-- ** Object Storage Device (OSD) ** : Thành phần duy nhất trong CEPH cluster có nhiệm vụ lưu trữ và lấy lại dữ liệu dưới dạng Object .Thông thường 
+- **Object Storage Device (OSD)** : Thành phần duy nhất trong CEPH cluster có nhiệm vụ lưu trữ và lấy lại dữ liệu dưới dạng Object .Thông thường 
 thì mỗi ổ cứng vật lý sẽ cần một OSD daemon.
-- ** Ceph monitors (MONs) ** : Theo dõi toàn bộ trạng thái của cluster bằng cách thiết lập một cluster map bao gồm OSD , MON ,PG , CRUSH và MDS map .
+- **Ceph monitors (MONs)** : Theo dõi toàn bộ trạng thái của cluster bằng cách thiết lập một cluster map bao gồm OSD , MON ,PG , CRUSH và MDS map .
 Tất cả các node trong cluster sẽ gửi thông tin thay đổi trạng thái về cho Monitors node.
-- ** Metadata Server (MDS) ** : Theo dõi cấu trúc file và lưu trữ metadata , chỉ dành riêng cho CephFS.
-- ** Reliable Autonomic Distributed Object Store (RADOS) ** : Đây là nền tảng của cụm lưu trữ CEPH. Mọi thứ trong CEPH đều được lưu dưới dạng Object,
+- **Metadata Server (MDS)** : Theo dõi cấu trúc file và lưu trữ metadata , chỉ dành riêng cho CephFS.
+- **Reliable Autonomic Distributed Object Store (RADOS)** : Đây là nền tảng của cụm lưu trữ CEPH. Mọi thứ trong CEPH đều được lưu dưới dạng Object,
 RADOS sẽ chịu trách nhiệm lưu trữ các Object này. Để đảm bảo yêu cầu đồng bộ dữ liệu , CEPH thực hiện sao chép , phát hiện lỗi và khôi phục dữ liệu cũng
 như cân bằng tải các node trên cluster.
-- ** Librados **: Thư viện cung cấp các cách có thể truy cập vào RADOS. Thư viện hỗ trợ các ngôn ngữ lập trình phổ biến như Ruby , PHP , Java , Phython ,
+- **Librados**: Thư viện cung cấp các cách có thể truy cập vào RADOS. Thư viện hỗ trợ các ngôn ngữ lập trình phổ biến như Ruby , PHP , Java , Phython ,
 C và C++ . Thư viện cung cấp sẵn các interface giao tiếp với (RDB , RGW , POSIX ) . Thư viện API này hỗ trợ truy cập trực tiếp vào RADOS và cho phép tạo
 ra các interface của riêng mình .
-- ** Ceph Block Device hay RADOS block device (RBD) ** : Cung cấp các giải pháp lưu trữ Block storage , có khả năng mapped ,formated và mounted như một ổ 
+- **Ceph Block Device hay RADOS block device (RBD)** : Cung cấp các giải pháp lưu trữ Block storage , có khả năng mapped ,formated và mounted như một ổ 
 đĩa tới server . RDB được trang bị các tinh năng lưu trữ doanh nghiệp như thin provisioning và snapshot.
-- ** Ceph Object Gateway hay RADOS gateway (RGW) ** : Cung cấp RESTful API interface tương thích với Amazon S3 ( Simple Storage Service ) và OpenStack Object 
+- **Ceph Object Gateway hay RADOS gateway (RGW)** : Cung cấp RESTful API interface tương thích với Amazon S3 ( Simple Storage Service ) và OpenStack Object 
 Storage API ( Swift ).RGW cũng hỗ trợ xác thực OpenStack keystone .
-- ** Ceph File System (CephFS) ** : Cung cấp một hệ thống phân tán với POSIX có kích thước bất kì . CEPHFS dựa vào CEPH MDS để theo dõi hệ thống cấp bậc của
+- **Ceph File System (CephFS)** : Cung cấp một hệ thống phân tán với POSIX có kích thước bất kì . CEPHFS dựa vào CEPH MDS để theo dõi hệ thống cấp bậc của
 nó , đó là metadata.
 
 
