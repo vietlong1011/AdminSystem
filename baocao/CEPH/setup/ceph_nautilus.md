@@ -165,11 +165,11 @@ ceph-deploy new ceph1 ceph2 ceph3
 
 ![](../images/26.png)
 
-	- ` ceph.conf` : file config được tự động khởi tạo
+- ` ceph.conf` : file config được tự động khởi tạo
 
-	- ` ceph-deploy-ceph.log ` : file log của toàn bộ thao tác đối với việc sử dụng lệnh ceph-deploy
+- ` ceph-deploy-ceph.log ` : file log của toàn bộ thao tác đối với việc sử dụng lệnh ceph-deploy
 
-	- ` ceph.mon.keyring` : Key monitoring được ceph sinh ra tự động để khởi tạo Cluster
+- ` ceph.mon.keyring` : Key monitoring được ceph sinh ra tự động để khởi tạo Cluster
 
 - Khai báo thêm các tùy chọn cho việc triển khai, vận hành CEPH vào file ceph.conf này trước khi cài đặt các gói cần thiết cho ceph trên các node. Lưu ý các 
 tham số về network.
@@ -188,7 +188,7 @@ osd crush chooseleaf type = 1
 public network = 10.10.13.0/24
 cluster network = 192.168.88.0/24
 EOF
-``
+```
 - public network : Đường trao đổi thông tin giữa các node Ceph và cũng là đường client kết nối vào
 - cluster network : Đường đồng bộ dữ liệu 
 
