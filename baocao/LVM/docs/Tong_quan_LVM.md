@@ -68,10 +68,15 @@ ra ngoài khả năng của ổ đĩa. Hiểu đơn giản thì một ổ đĩa 
 
 
 Trong đó bạn chọn `n` để bắt đầu tạo partition
+
 Bạn chọn `p` để tạo partition primary
+
 Bạn chọn `1` để tạo partition primary 1
+
 Tại First sector (2048-20971519, default 2048) bạn để mặc định
+
 Tại Last sector, +sectors or +size{K,M,G} (2048-20971519, default 20971519) bạn chọn `+1G `để partition bạn tạo ra có dung lượng 1 G
+
 Bạn chọn `w` để lưu lại và thoát.
 
 Tiếp đó , thay đổi định dạng của Partition vừa mới tạo thành LVM:
@@ -98,9 +103,14 @@ Bạn chọn `8e` để đổi thành LVM
 #### 4.2.5 Tạo Logical Volume
 - Ta sử dụng lệnh `lvcreate` theo cú pháp
 ` lvcreate -L size_volume -n tên_logic_volume tên_group_volume `
+
+
 size_volume : là giá trị dung lượng của Logic volume (thường tính bằng đơn vị G).
+
 L: Chỉ ra dung lượng của logical volume
+
 n: Chỉ ra tên của logical volume
+
 - Để kiểm tra các Logical Volume ta dùng lệnh ` lvs` 
 
 ![](../images/10.PNG)
