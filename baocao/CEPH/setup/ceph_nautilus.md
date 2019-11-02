@@ -185,7 +185,7 @@ osd pool default pgp num = 128
 
 osd crush chooseleaf type = 1
 
-public network = 10.10.13.0/24
+public network = 192.168.145.0/24
 cluster network = 192.168.88.0/24
 EOF
 ```
