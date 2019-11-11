@@ -38,9 +38,9 @@ dữ liệu.
  
 #### 2.2 Một số mô hình hoạt động.
 
-![](images/21.png)
+![](../images/21.png)
 
-![](images/23.png)
+![](../images/23.png)
 
 ###### Trong cả hai mô hình trên sẽ luôn có 1 server database master phục vụ cho việc Write dữ liệu và có một hoặc nhiều hơn các server database Read
 dữ liệu .  
@@ -48,10 +48,10 @@ dữ liệu .
 #### 2.3 Cách hoạt động
 
 
-![](images/22.png)
+![](../images/22.png)
 
 
-![](images/24.png)
+![](../images/24.png)
 
 
 ##### Trên Server Database Master
