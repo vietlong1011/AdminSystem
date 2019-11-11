@@ -1,4 +1,9 @@
-﻿﻿### A.Tạo tài khoản root trong MySQL
+Note : Lấy mk dùng lệnh
+grep "A temporary password" /var/log/mysqld.log
+Sinh ra pasword root. Nhập password và tạo mk cực mạnh 
+
+
+### A.Tạo tài khoản root trong MySQL
 
 > Để thực hiện lệnh , người dùng phải đăng nhập bằng tài khoản root của MySQL  hoặc một user có full quyền 
 
