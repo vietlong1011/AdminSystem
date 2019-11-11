@@ -33,7 +33,7 @@
 `  wget http://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm `
 
 - Tạo repostory cho MySQL 
-` rpm -ivh mysql57-communuty-release-el7-9.noarch.rpm `
+` rpm -ivh (Uvh) mysql57-communuty-release-el7-9.noarch.rpm `
 
 #### 4.Cài MySQL trên server 
 
