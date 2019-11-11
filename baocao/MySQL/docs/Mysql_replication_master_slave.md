@@ -55,16 +55,16 @@ dữ liệu .
 
 
 ##### Trên Server Database Master
-- Các kết nối từ web, app tới Master DB sẽ mở Session_Thread khi có nhu cầu ghi dữ liệu . Các Session_Thread sẽ ghi các statement SQL vào file
-binlog ( với format của binlog là statenment-based hoặc mix). Binlog được lưu trong data_dir (file cấu hình my.conf) và có thể cấu hình các thông số
+- Các kết nối từ web, app tới Master DB sẽ mở `Session_Thread` khi có nhu cầu ghi dữ liệu . Các `Session_Thread` sẽ ghi các `statement SQL` vào file
+`binlog` ( với format của binlog là `statenment-based` hoặc `mix`). `Binlog` được lưu trong `data_dir` (file cấu hình `my.conf`) và có thể cấu hình các thông số
 như size và thời gian lưu trữ trong bao nhiêu ngày.
 
-- Master Database sẽ mở một Dump_Thread và gửi binlog tới I/O_Thread mỗi khi I/O_Thread từ Salve DB yêu cầu dữ liệu.
+- Master Database sẽ mở một `Dump_Thread` và gửi binlog tới `I/O_Thread` mỗi khi `I/O_Thread` từ `Salve DB` yêu cầu dữ liệu.
 
 ##### Trên Server Database Master
-- Trên mỗi Slave server sẽ mở một I/O_Thread kết nối tới  Master DB thông qua Network , giao thức TCP (với MySQL 5.5 replication chỉ hỗ trợ Single_Thread nên mỗi
-Slave DB sẽ chỉ mở duy nhất một kết nối tới Master DB , các phiên bản sau 5.6  , 5.7 hỗ trợ mở đồng thời nhiều kết nối hơn) yêu cầu binlog.
+- Trên mỗi Slave server sẽ mở một `I/O_Thread` kết nối tới  Master DB thông qua Network , giao thức TCP (với MySQL 5.5 replication chỉ hỗ trợ `Single_Thread` nên mỗi
+Slave DB sẽ chỉ mở duy nhất một kết nối tới Master DB , các phiên bản sau 5.6  , 5.7 hỗ trợ mở đồng thời nhiều kết nối hơn) yêu cầu `binlog`.
 
-- Sau khi Dump_Thread gửi tới I/O_Thread , I/O_Thread sẽ có nhiệm vụ đọc binlog này và ghi vào relaylog
+- Sau khi `Dump_Thread` gửi tới `I/O_Thread` , `I/O_Thread` sẽ có nhiệm vụ đọc `binlog` này và ghi vào `relaylog`
 
-- Đồng thời trên Slave DB sẽ mở môt SQL_Thread , SQL_Thread có nhiệm vụ đọc các event từ relaylog và apply các event đó vào Slave , hoàn thành quá trình replication  
+- Đồng thời trên Slave DB sẽ mở môt `SQL_Thread` , `SQL_Thread` có nhiệm vụ đọc các event từ relaylog và apply các event đó vào Slave , hoàn thành quá trình replication  
