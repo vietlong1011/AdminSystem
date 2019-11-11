@@ -27,7 +27,7 @@
 ` yum install wget `
 
 #### 3. Tải MySQL repo ( repository )
-- Các phiên bản của MySQL repository được lưu trong :https://repo.mysql.com/
+- Các phiên bản của MySQL repository được lưu trong :https://repo.mysql.com/ hoặc trong https://dev.mysql.com/downloads/mysql/
 
 - Tải MySQL repository : 
 `  wget http://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm `
