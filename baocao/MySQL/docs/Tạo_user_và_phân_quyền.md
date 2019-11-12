@@ -74,6 +74,10 @@
 
 ` SHOW GRANTS FOR  name_user@host `
 
+### REMOTE DB từ máy khác.
+`mysql -u user -p -hip` 
+- vd: mysql -u user -p h10.2.9.50.
+- ip là ip DB-server mà ta cần truy cập tới. 
 
 
 
