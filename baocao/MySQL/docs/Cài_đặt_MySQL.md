@@ -33,7 +33,7 @@
 `  wget http://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm `
 
 - Tạo repostory cho MySQL 
-` rpm -ivh (Uvh) mysql80-communuty-release-el7-3.noarch.rpm `
+` rpm -ivh (Uvh) mysql80-community-release-el7-3.noarch.rpm `
 
 #### 4.Cài MySQL trên server 
 
