@@ -1,5 +1,1 @@
-[1.Tổng quan về WordPress](docs/WordPress.md)
-
-[2.Cài đặt WordPress với LAMP](docs/Cài_đặt_WordPress.md)
-
-[3. Giới thiệu NGINX](docs/NGINX.md)
+﻿[1.Tổng quan về WordPress](docs/WordPress.md)[2.Cài đặt WordPress với LAMP](docs/Cài_đặt_WordPress.md)[3. Giới thiệu NGINX](docs/NGINX.md)[4. Cài đặt WordPress với LEMP](docs/Cai_đat_wordpress_with_LEMP.md)
