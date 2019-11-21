@@ -30,10 +30,10 @@
 - Các phiên bản của MySQL repository được lưu trong :https://repo.mysql.com/ hoặc trong https://dev.mysql.com/downloads/mysql/
 
 - Tải MySQL repository : 
-`  wget http://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm `
+`  wget http://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm `
 
 - Tạo repostory cho MySQL 
-` rpm -ivh (Uvh) mysql57-communuty-release-el7-9.noarch.rpm `
+` rpm -ivh (Uvh) mysql80-community-release-el7-3.noarch.rpm `
 
 #### 4.Cài MySQL trên server 
 
