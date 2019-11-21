@@ -43,14 +43,13 @@ systemctl stop httpd.service
 systemctl start nginx.service
 systemctl restart nginx.service
 systemctl enable nginx.service
-`
+```
 - PHP-FPM
 ```
 systemctl start php-fpm.service
 systemctl restart php-fpm.service
 systemctl enable php-fpm.service
 ```
-
 
 ### 3. Cấu hình để NGINX hoạt động với PHP 7.
 #### 3.1 Chỉnh worker_processes bằng với số processor VPS 
