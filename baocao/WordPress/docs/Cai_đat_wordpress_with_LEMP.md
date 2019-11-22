@@ -130,9 +130,11 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 - Trao quyền cho Nginx
 ` chown -R nginx:nginx /var/www/html/example.com `
 
+
 ![](../images/13.png)
 
 - Lấy key từ API wordpress vào chèn vào ` wp-confing.php ` 
+- ` curl -s https://api.wordpress.org/secret-key/1.1/salt `
 
 
 
