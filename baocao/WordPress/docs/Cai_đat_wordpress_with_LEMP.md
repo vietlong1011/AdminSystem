@@ -125,7 +125,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 ` tar xzvf latest.tar.gz `
 
 - Chuyển file sang website cài đặt (example.com)
-` mv /tmp/wordpress/* /var/www/html/example.com `
+` mv /tmp/wordpress/* /var/www/html/example.com/ `
 
 
 
