@@ -130,7 +130,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 
 
 - Chuyển file từ` wp-config-example.php `  sang ` wp-config.php `
-` cp wp-config-sample.php  wp-config.php `
+` mv wp-config-sample.php  wp-config.php `
 
 - Trao quyền cho Nginx
 ` chown -R nginx:nginx /var/www/html/example.com `
