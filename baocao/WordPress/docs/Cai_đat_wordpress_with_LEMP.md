@@ -112,6 +112,11 @@ if (mysqli_connect_errno())
 - Trong khi tạo tài khoản kết nối db cần thay đổi phương thức xác thực bằng lệnh 
 ` ALTER USER 'sername'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Password'; `
 
+ - Để cho phép connect database từ xa thì sửa địa chỉ ip trong file `/etc/my.cnf`
+ 
+ ![](../images/15.png)
+ 
+
 
 ### 5. Thay đổi các thông số trong NGINX viết trong file ` vi /etc/nginx/conf.d/default.conf`
 
@@ -176,4 +181,5 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 
 ### 9 Test
 - Truy cập vào http://ip(host_name)/wp-admin
+
 
