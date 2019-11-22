@@ -84,6 +84,9 @@ phpinfo();
 ```
 - Thay đổi thông số trong ` /etc/nginx/conf.d/default.conf`
 - Cấp quyền cho NGINX trong file `chown -R nginx:nginx /var/www/html/example.com/ `
+- Tùy trỉnh nội dụng trong file ` etc/nginx/conf.d/default.conf` phía dưới :
+
+![](../images/12.png)
 
 
 ### 4. Cài Mysql , tạo tài database , user , phân quyền.
