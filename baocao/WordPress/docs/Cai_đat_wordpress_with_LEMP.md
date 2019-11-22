@@ -86,7 +86,7 @@ phpinfo();
 
 ### 4. Cài Mysql , tạo tài database , user , phân quyền.
 
-### 5. Thay đổi các thông số trong NGINX viết trong file ` vi /etc/nginx/conf.d/default.conf`ng
+### 5. Thay đổi các thông số trong NGINX viết trong file ` vi /etc/nginx/conf.d/default.conf`
 
 
 ![](../images/12.png)
