@@ -94,6 +94,24 @@ $document_root
 ```
 
 ### 4. Cài Mysql , tạo tài database , user , phân quyền.
+#### NOTE:
+- Tạo file ` dbcheck.php ` trong ` /var/www/html/example.com/ ` để kiểm tra lỗi.
+
+```
+<?php
+$con = mysqli_connect("localhost","userwp2","Hse@12345","dbwp1");
+ 
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+?>
+
+```
+- Trong khi tạo tài khoản kết nối db cần thay đổi phương thức xác thực bằng lệnh 
+` ALTER USER 'sername'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Password'; `
+
 
 ### 5. Thay đổi các thông số trong NGINX viết trong file ` vi /etc/nginx/conf.d/default.conf`
 
@@ -151,6 +169,9 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 - Sửa thông tin cấu hình DB trong mục ` /var/www/html/example.com/wp-config.php `
 
 ![](../images/14.png)
+
+
+
 
 
 ### 9 Test
