@@ -88,6 +88,10 @@ phpinfo();
 
 ![](../images/12.png)
 
+```
+try_files $uri $uri/ /index.php?q=$uri&amp;$args;
+$document_root
+```
 
 ### 4. Cài Mysql , tạo tài database , user , phân quyền.
 
