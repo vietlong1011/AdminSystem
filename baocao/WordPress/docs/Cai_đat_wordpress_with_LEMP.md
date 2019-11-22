@@ -11,7 +11,7 @@
 
 ### 2. Cài đặt NGINX , PHP
 - Bản php 7.0 : ` yum --enablerepo=remi,remi-php70 install -y nginx php-fpm php-common `
-- Bản php 7.1 : ` yum --enablerepo=remi,remi-php71 install -y nginx php-fpm php-common `
+- Bản php 7.2 : ` yum --enablerepo=remi,remi-php712install -y nginx php-fpm php-common `
 
 ##### Một số module PHP thông dụng:
 
@@ -31,9 +31,9 @@
 - MBString (php-mbstring) – A module for PHP applications which need multi-byte string handling
 - MCrypt (php-mcrypt) – Standard PHP module provides mcrypt library support
 
-##### Để cài đặt cần sử dụng thêm lệnh ` yum --enablerepo=remi,remi-php71 install ten_module` 
+##### Để cài đặt cần sử dụng thêm lệnh ` yum --enablerepo=remi,remi-php72 install ten_module` 
 
-##### Cài một số modul php phổ biến : ` yum --enablerepo=remi,remi-php71 install php-opcache php-pecl-apcu php-cli php-pear php-pdo 
+##### Cài một số modul php phổ biến : ` yum --enablerepo=remi,remi-php72 install php-opcache php-pecl-apcu php-cli php-pear php-pdo 
 php-mysqlnd php-pgsql php-pecl-mongodb php-pecl-redis php-pecl-memcache php-pecl-memcached php-gd php-mbstring php-mcrypt php-xml ` 
 
 #### 2.1 Một số Systemctl với NGINX với PHP-FPM
