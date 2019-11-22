@@ -75,13 +75,15 @@ systemctl enable php-fpm.service
 - listen = 127.0.0.1:9000  ` chưa chuyển được cổng nghe: listen = /var/run/php-fpm/php-fpm.sock `
 
 ### 3.4 Test cấu hình NGINX và PHP-FPM
-- Sủa file ` /usr/share/nginx/html/info.php `
+- Tao và sửa file ` /var/www/html/example.com/info.php `
 - Thêm nội dung vào file trên:
 ```
 <?php
 phpinfo();
 ?>
 ```
+- Thay đổi thông số trong ` /etc/nginx/conf.d/default.conf`
+- Cấp quyền cho NGINX trong file `chown -R nginx:nginx /var/www/html/example.com/ `
 
 
 ### 4. Cài Mysql , tạo tài database , user , phân quyền.
