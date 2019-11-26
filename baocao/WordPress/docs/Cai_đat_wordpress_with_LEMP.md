@@ -11,7 +11,7 @@
 
 ### 2. Cài đặt NGINX , PHP
 - Bản php 7.0 : ` yum --enablerepo=remi,remi-php70 install -y nginx php-fpm php-common `
-- Bản php 7.2 : ` yum --enablerepo=remi,remi-php712install -y nginx php-fpm php-common `
+- Bản php 7.2 : ` yum --enablerepo=remi,remi-php72 install -y nginx php-fpm php-common `
 
 ##### Một số module PHP thông dụng:
 
