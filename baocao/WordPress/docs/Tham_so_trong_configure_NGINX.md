@@ -117,11 +117,13 @@ Mô-đun này được xây dựng tự động nếu nền tảng không xuất
 ` --without-http_upstream_least_conn_module ` : Vô hiệu hóa việc xây dựng một mô-đun thực hiện phương pháp cân bằng tải tối thiểu.
 
 ` --without-http_upstream_keepalive_module ` : Vô hiệu hóa việc xây dựng một mô-đun cung cấp bộ nhớ đệm của các kết nối đến các máy chủ ngược dòng.
+
 ` --without-http_upstream_zone_module ` : Vô hiệu hóa việc xây dựng một mô-đun cho phép lưu trữ trạng thái thời gian chạy của một nhóm ngược dòng trong vùng nhớ chung
 
 `  --with-http_perl_module && --with-http_perl_module=dynamic ` : Cho phép xây dựng mô-đun Perl nhúng. Mô-đun này không được xây dựng theo mặc định.
 
 ` --with-perl_modules_path=path ` : Định nghĩa một thư mục sẽ giữ các mô-đun Perl.
+
 ` --with-perl=path ` : đặt tên của nhị phân Perl.
 
 ` --http-log-path=path ` : Đặt tên của tệp nhật ký yêu cầu chính của máy chủ HTTP. Sau khi cài đặt, tên tệp luôn có thể được thay đổi trong tệp cấu hình nginx.conf bằng cách sử dụng lệnh access_log. Theo mặc định, tệp được đặt tên là tiền tố / log / access.log.
@@ -139,6 +141,7 @@ Mô-đun này được xây dựng tự động nếu nền tảng không xuất
 ` --without-http ` : Vô hiệu hóa máy chủ HTTP
 
 ` --without-http-cache `: Vô hiệu hóa bộ đệm HTTP
+
 ` --with-mail && --with-mail=dynamic ` : Cho phép máy chủ proxy thư POP3 / IMAP4 / SMTP.
 
 ` --with-mail_ssl_module ` : Cho phép xây dựng một mô-đun bổ sung hỗ trợ giao thức SSL / TLS cho máy chủ proxy thư. Mô-đun này không được xây dựng theo mặc định. Thư viện OpenSSL là cần thiết để xây dựng và chạy mô-đun này.
@@ -167,12 +170,15 @@ Mô-đun này được xây dựng tự động nếu nền tảng không xuất
 ` --without-stream_map_module ` : Vô hiệu hóa việc xây dựng mô đun ngx_stream_core_module tạo các biến có giá trị tùy thuộc vào giá trị của các biến khác.
 
 ` --without-stream_split_clients_module ` : Vô hiệu hóa việc xây dựng mô-đun ngx_stream split_clents tạo các biến để thử nghiệm A / B.
+
 ` --without-stream_return_module ` : Vô hiệu hóa việc xây dựng mô-đun ngx_stream_core_module gửi một số giá trị cụ thể đến máy khách và sau đó đóng kết nối.
 
 ` --without-stream_upstream_hash_module `: Vô hiệu hóa việc xây dựng một mô-đun thực hiện phương pháp cân bằng tải băm.
+
 ` --without-stream_upstream_least_conn_module ` : Vô hiệu hóa việc xây dựng một mô-đun thực hiện phương pháp cân bằng tải tối thiểu.
 
 ` --without-stream_upstream_zone_module ` : Vô hiệu hóa việc xây dựng một mô-đun cho phép lưu trữ trạng thái thời gian chạy của một nhóm ngược dòng trong vùng nhớ chung.
+
 ` --with-google_perftools_module ` : Cho phép xây dựng mô-đun ngx_google_perftools_module cho phép định hình các quy trình nhân viên nginx bằng Google Performance Tools. Mô-đun dành cho các nhà phát triển nginx và không được xây dựng theo mặc định.
 
 ` --with-cpp_test_module` : Cho phép xây dựng mô-đun ngx_cpp_test_module.
