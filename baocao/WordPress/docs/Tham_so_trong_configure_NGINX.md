@@ -1,18 +1,17 @@
 ### Các tham số trong ./configure
-` --help ` : các message gợi ý , trợ giúp
-` --prefix=path ` : Chỉ định thư mục chứa tập tin cấu hình , đồng thời chứa đường dẫn thư viện 	( Thư mục mặc định là : / usr / local / nginx ).
-` --sbin-path=path ` : Nơi chứa thư mục thực thi NGINX ( Thư mục mặc định là : prefix/sbin/nginx. )
-` --modules-path=path ` : Định nghĩa thư mục , nơi các Module sẽ được cài đặt.
-` --conf-path=path ` : Nơi chứa tập tin cấu hình nginx.conf . ( Thư mục mặc định là : prefix/conf/nginx.conf )
-` --error-log-path=path `: Nơi lưu nhật kí các lỗi , các cảnh báo ( Thư mục mặc định prefix/logs/error.log.) 
-` --pid-path=path ` : Nơi lưu dữ các ID tiến trình của quy trình chính . Sau khi cài đặt tệp trên có thể thay đổi trong file cấu hình nginx.conf 
-bằng lệnh pid. (Nơi lưu trữ mặc định là : prefix/logs/nginx.pid.)
+- ` --help ` : các message gợi ý , trợ giúp
 
-` --lock-path=path ` : Nơi lưu trữ các tệp khóa . Sau khi cài đặt, có thể thay đổi giá trị trong tập tin cấu hình nginx.conf bằng lệnh lock_file . (Nơi lưu
-trữ mặc định là : prefix/logs/nginx.lock.)
+- ` --prefix=path ` : Chỉ định thư mục chứa tập tin cấu hình , đồng thời chứa đường dẫn thư viện 	( Thư mục mặc định là : / usr / local / nginx ).
 
-` --user=name  && --group=name `:Thiết lập tên và nhóm người dùng (không cần đặc quyền) được sử dụng bởi Nginx worker processes (Để vận hành 
-máy móc thì cần công nhân vận hành, worker processes có thể hiểu trong trường hợp này là như thế).  
+- ` --sbin-path=path ` : Nơi chứa thư mục thực thi NGINX ( Thư mục mặc định là : prefix/sbin/nginx. )
+- ` --modules-path=path ` : Định nghĩa thư mục , nơi các Module sẽ được cài đặt.
+- ` --conf-path=path ` : Nơi chứa tập tin cấu hình nginx.conf . ( Thư mục mặc định là : prefix/conf/nginx.conf )
+- ` --error-log-path=path `: Nơi lưu nhật kí các lỗi , các cảnh báo ( Thư mục mặc định prefix/logs/error.log.) 
+- ` --pid-path=path ` : Nơi lưu dữ các ID tiến trình của quy trình chính . Sau khi cài đặt tệp trên có thể thay đổi trong file cấu hình nginx.conf bằng lệnh pid. (Nơi lưu trữ mặc định là : prefix/logs/nginx.pid.)
+
+` --lock-path=path ` : Nơi lưu trữ các tệp khóa . Sau khi cài đặt, có thể thay đổi giá trị trong tập tin cấu hình nginx.conf bằng lệnh lock_file . (Nơi lưu trữ mặc định là : prefix/logs/nginx.lock.)
+
+` --user=name  && --group=name `:Thiết lập tên và nhóm người dùng (không cần đặc quyền) được sử dụng bởi Nginx worker processes (Để vận hành máy móc thì cần công nhân vận hành, worker processes có thể hiểu trong trường hợp này là như thế).  
 
 ` --build=name ` : Đặt tên xây dựng Nginx tùy chọn.
 
@@ -21,8 +20,7 @@ máy móc thì cần công nhân vận hành, worker processes có thể hiểu 
 ` --with-select_module && --without-select_module ` : Cho phép hoặc vô hiệu hóa build các module với phương thức select().
 Mô-đun này được xây dựng tự động nếu nền tảng không xuất hiện để hỗ trợ các phương thức phù hợp hơn như kqueue, epoll hoặc / dev / poll.
 
-` --with-poll_module && --without-poll_module ` : Cho phép hoặc vô hiệu hóa  build các module với phương thức poll(). . Mô-đun này được xây dựng tự
-động nếu nền tảng không xuất hiện để hỗ trợ các phương thức phù hợp hơn như kqueue, epoll hoặc / dev / poll.
+` --with-poll_module && --without-poll_module ` : Cho phép hoặc vô hiệu hóa  build các module với phương thức poll(). . Mô-đun này được xây dựng tự động nếu nền tảng không xuất hiện để hỗ trợ các phương thức phù hợp hơn như kqueue, epoll hoặc / dev / poll.
 
 ` --with-threads ` : Cho phép sử dụng các thread pools ( nhóm luồng)
 
@@ -32,23 +30,17 @@ Mô-đun này được xây dựng tự động nếu nền tảng không xuất
 
 ` --with-http_v2_module ` : Cho phép xây dựng một mô-đun cung cấp hỗ trợ cho HTTP / 2. Modul này không được xây dựng theo mặc định.
 
-` --with-http_realip_module ` : Cho phép xây dựng mô đun ngx_http_realip_module thay đổi địa chỉ máy khách thành địa chỉ được gửi trong trường tiêu đề 
-đã chỉ định. Mô-đun này không được xây dựng theo mặc định. 
+` --with-http_realip_module ` : Cho phép xây dựng mô đun ngx_http_realip_module thay đổi địa chỉ máy khách thành địa chỉ được gửi trong trường tiêu đề đã chỉ định. Mô-đun này không được xây dựng theo mặc định. 
 
-` --with-http_addition_module `: Cho phép xây dựng mô-đun ngx_http_addition_module thêm văn bản trước và sau khi phản hồi. Mô-đun này không được xây dựng 
-theo mặc định.
+` --with-http_addition_module `: Cho phép xây dựng mô-đun ngx_http_addition_module thêm văn bản trước và sau khi phản hồi. Mô-đun này không được xây dựng theo mặc định.
 
-` --with-http_xslt_module && --with-http_xslt_module=dynamic `: Cho phép xây dựng mô đun ngx_http_xslt_module để chuyển đổi các phản hồi XML bằng cách sử dụng 
-một hoặc nhiều biểu định kiểu XSLT. Mô-đun này không được xây dựng theo mặc định. Các thư viện libxml2 và libxslt được yêu cầu để xây dựng và chạy mô-đun này.
+` --with-http_xslt_module && --with-http_xslt_module=dynamic `: Cho phép xây dựng mô đun ngx_http_xslt_module để chuyển đổi các phản hồi XML bằng cách sử dụng một hoặc nhiều biểu định kiểu XSLT. Mô-đun này không được xây dựng theo mặc định. Các thư viện libxml2 và libxslt được yêu cầu để xây dựng và chạy mô-đun này.
 
-` --with-http_image_filter_module && --with-http_image_filter_module=dynamic ` : Cho phép xây dựng mô-đun ngx_http_image_filter_module để chuyển đổi hình ảnh ở 
-định dạng JPEG, GIF, PNG và WebP. Mô-đun này không được xây dựng theo mặc định.
+` --with-http_image_filter_module && --with-http_image_filter_module=dynamic ` : Cho phép xây dựng mô-đun ngx_http_image_filter_module để chuyển đổi hình ảnh ở định dạng JPEG, GIF, PNG và WebP. Mô-đun này không được xây dựng theo mặc định.
 
-` --with-http_sub_module `: Cho phép xây dựng mô-đun ngx_http_sub_module sửa đổi phản hồi bằng cách thay thế một chuỗi được chỉ định bằng một chuỗi khác. Mô-đun 
-này không được xây dựng theo mặc định.
+` --with-http_sub_module `: Cho phép xây dựng mô-đun ngx_http_sub_module sửa đổi phản hồi bằng cách thay thế một chuỗi được chỉ định bằng một chuỗi khác. Mô-đun này không được xây dựng theo mặc định.
 
-` --with-http_geoip_module && --with-http_geoip_module=dynamic ` : Cho phép xây dựng mô đun ngx_http_geoip_module tạo các biến tùy thuộc vào địa chỉ IP của máy 
-khách và cơ sở dữ liệu MaxMind được biên dịch trước. Mô-đun này không được xây dựng theo mặc định.
+` --with-http_geoip_module && --with-http_geoip_module=dynamic ` : Cho phép xây dựng mô đun ngx_http_geoip_module tạo các biến tùy thuộc vào địa chỉ IP của máy khách và cơ sở dữ liệu MaxMind được biên dịch trước. Mô-đun này không được xây dựng theo mặc định.
 
 ` --with-http_dav_module `: Cho phép xây dựng mô-đun ngx_http_dav_module cung cấp tự động hóa quản lý tệp thông qua giao thức WebDAV. Mô-đun này không được xây dựng theo mặc định.
  
@@ -56,29 +48,23 @@ khách và cơ sở dữ liệu MaxMind được biên dịch trước. Mô-đun
 
 ` --with-http_mp4_module ` : Cho phép xây dựng mô-đun ngx_http_mp4_module cung cấp hỗ trợ phía máy chủ giả cho các tệp MP4. Mô-đun này không được xây dựng theo mặc định.
 
-` --with-http_gunzip_module ` : Cho phép xây dựng mô-đun ngx_http_gunzip_module giải nén các phản hồi với Mã hóa nội dung mã hóa: gzip, cho các máy khách không hỗ trợ phương thức mã 
-hóa của gzip. Mô-đun này không được xây dựng theo mặc định.
+` --with-http_gunzip_module ` : Cho phép xây dựng mô-đun ngx_http_gunzip_module giải nén các phản hồi với Mã hóa nội dung mã hóa: gzip, cho các máy khách không hỗ trợ phương thức mã hóa của gzip. Mô-đun này không được xây dựng theo mặc định.
 
-` --with-http_gzip_static_module ` : Cho phép xây dựng mô-đun ngx_http_gzip_static_module cho phép gửi các tệp được nén bằng phần mở rộng tên tệp của .gz. Thay vì các tệp thông thường. 
-Mô-đun này không được xây dựng theo mặc định.
+` --with-http_gzip_static_module ` : Cho phép xây dựng mô-đun ngx_http_gzip_static_module cho phép gửi các tệp được nén bằng phần mở rộng tên tệp của .gz. Thay vì các tệp thông thường. Mô-đun này không được xây dựng theo mặc định.
 
-` --with-http_auth_request_module ` : Cho phép xây dựng mô-đun ngx_http_auth_Vquest_module thực hiện ủy quyền của khách hàng dựa trên kết quả của một yêu cầu con. Mô-đun này không được 
-xây dựng theo mặc định.
+` --with-http_auth_request_module ` : Cho phép xây dựng mô-đun ngx_http_auth_Vquest_module thực hiện ủy quyền của khách hàng dựa trên kết quả của một yêu cầu con. Mô-đun này không được xây dựng theo mặc định.
 
-` --with-http_random_index_module ` : Cho phép xây dựng mô đun ngx_http_random_index_module xử lý các yêu cầu kết thúc bằng ký tự gạch chéo (’/,) và chọn một tệp ngẫu nhiên trong một 
-thư mục để phục vụ như một tệp chỉ mục. Mô-đun này không được xây dựng theo mặc định.
+` --with-http_random_index_module ` : Cho phép xây dựng mô đun ngx_http_random_index_module xử lý các yêu cầu kết thúc bằng ký tự gạch chéo (’/,) và chọn một tệp ngẫu nhiên trong một thư mục để phục vụ như một tệp chỉ mục. Mô-đun này không được xây dựng theo mặc định.
 
 ` --with-http_secure_link_module ` : Cho phép xây dựng mô-đun ngx_http_secure_link_module. Mô-đun này không được xây dựng theo mặc định.
 
 ` --with-http_degradation_module ` : Cho phép xây dựng mô-đun ngx_http_degradation_module. Mô-đun này không được xây dựng theo mặc định.
 
-` --with-http_slice_module ` : Cho phép xây dựng mô-đun ngx_http_slice_module phân chia yêu cầu thành các yêu cầu con, mỗi yêu cầu trả về một phạm vi phản hồi nhất định. Các mô-đun cung
-cấp bộ nhớ đệm hiệu quả hơn của các phản ứng lớn. Mô-đun này không được xây dựng theo mặc định.
+` --with-http_slice_module ` : Cho phép xây dựng mô-đun ngx_http_slice_module phân chia yêu cầu thành các yêu cầu con, mỗi yêu cầu trả về một phạm vi phản hồi nhất định. Các mô-đun cungcấp bộ nhớ đệm hiệu quả hơn của các phản ứng lớn. Mô-đun này không được xây dựng theo mặc định.
 
 ` --with-http_stub_status_module ` : Cho phép xây dựng mô-đun ngx_http_stub_status_module cung cấp quyền truy cập vào thông tin trạng thái cơ bản. Mô-đun này không được xây dựng theo mặc định.
 
-` --without-http_charset_module ` : Vô hiệu hóa việc xây dựng mô-đun ngx_http_charset_module để thêm bộ ký tự được chỉ định vào trường tiêu đề phản hồi Kiểu nội dung của Kiểu và có thể chuyển 
-đổi dữ liệu từ bộ ký tự này sang bộ ký tự khác.
+` --without-http_charset_module ` : Vô hiệu hóa việc xây dựng mô-đun ngx_http_charset_module để thêm bộ ký tự được chỉ định vào trường tiêu đề phản hồi Kiểu nội dung của Kiểu và có thể chuyển đổi dữ liệu từ bộ ký tự này sang bộ ký tự khác.
 
 ` --without-http_gzip_module ` : Vô hiệu hóa việc xây dựng một mô-đun nén các phản hồi của máy chủ HTTP. Thư viện zlib là cần thiết để xây dựng và chạy mô-đun này.
 
@@ -88,13 +74,11 @@ cấp bộ nhớ đệm hiệu quả hơn của các phản ứng lớn. Mô-đu
 
 ` --without-http_access_module ` : Không cho phép xây dựng mô-đun ngx_http_access_module cho phép giới hạn quyền truy cập vào một số địa chỉ máy khách nhất định.
 
-` --without-http_auth_basic_module ` : Vô hiệu hóa việc xây dựng mô-đun ngx_http_auth_basic_module cho phép giới hạn quyền truy cập vào tài nguyên bằng cách xác thực tên người dùng và mật 
-khẩu bằng giao thức xác thực cơ bản HTTP HTTP.
+` --without-http_auth_basic_module ` : Vô hiệu hóa việc xây dựng mô-đun ngx_http_auth_basic_module cho phép giới hạn quyền truy cập vào tài nguyên bằng cách xác thực tên người dùng và mật khẩu bằng giao thức xác thực cơ bản HTTP HTTP.
 
 ` --without-http_mirror_module ` : Không cho phép xây dựng mô-đun ngx_http_mirror_module thực hiện phản chiếu yêu cầu ban đầu bằng cách tạo các yêu cầu phản chiếu nền.
 
-` --without-http_autoindex_module ` : Vô hiệu hóa việc xây dựng mô-đun ngx_http_autoindex_module xử lý các yêu cầu kết thúc bằng ký tự gạch chéo (’/,) và tạo danh sách thư mục trong trường hợp 
-mô-đun ngx_http_index_module không thể tìm thấy tệp chỉ mục.
+` --without-http_autoindex_module ` : Vô hiệu hóa việc xây dựng mô-đun ngx_http_autoindex_module xử lý các yêu cầu kết thúc bằng ký tự gạch chéo (’/,) và tạo danh sách thư mục trong trường hợp mô-đun ngx_http_index_module không thể tìm thấy tệp chỉ mục.
 
 ` --without-http_geo_module ` : Không cho phép xây dựng mô-đun ngx_http_geo_module tạo các biến có giá trị tùy thuộc vào địa chỉ IP của máy khách.
 
@@ -121,6 +105,7 @@ mô-đun ngx_http_index_module không thể tìm thấy tệp chỉ mục.
 ` --without-http_limit_conn_module ` : Vô hiệu hóa việc xây dựng mô-đun ngx_http_limit_conn_module giới hạn số lượng kết nối trên mỗi khóa, ví dụ: số lượng kết nối từ một địa chỉ IP duy nhất.
 
 ` --without-http_limit_req_module ` : Vô hiệu hóa việc xây dựng mô-đun ngx_http_limit_Vq_module giới hạn tốc độ xử lý yêu cầu trên mỗi khóa, ví dụ: tốc độ xử lý các yêu cầu đến từ một địa chỉ IP duy nhất.
+
 ` --without-http_empty_gif_module ` : Vô hiệu hóa việc xây dựng một mô-đun phát ra GIF trong suốt một pixel.
 
 ` --without-http_browser_module ` : Vô hiệu hóa việc xây dựng mô-đun ngx_http_browser_module để tạo các biến có giá trị phụ thuộc vào giá trị của trường tiêu đề yêu cầu của tác nhân người dùng-tác nhân.
@@ -141,20 +126,15 @@ mô-đun ngx_http_index_module không thể tìm thấy tệp chỉ mục.
 
 ` --http-log-path=path ` : Đặt tên của tệp nhật ký yêu cầu chính của máy chủ HTTP. Sau khi cài đặt, tên tệp luôn có thể được thay đổi trong tệp cấu hình nginx.conf bằng cách sử dụng lệnh access_log. Theo mặc định, tệp được đặt tên là tiền tố / log / access.log.
 
-` --http-client-body-temp-path=path ` : Định nghĩa một thư mục để lưu trữ các tệp tạm thời chứa các thân yêu cầu của máy khách. Sau khi cài đặt, thư mục luôn có thể được thay đổi trong tệp cấu hình nginx.conf 
-bằng cách sử dụng lệnh client_body_temp_path. Theo mặc định, thư mục được đặt tên là tiền tố / client_body_temp.
+` --http-client-body-temp-path=path ` : Định nghĩa một thư mục để lưu trữ các tệp tạm thời chứa các thân yêu cầu của máy khách. Sau khi cài đặt, thư mục luôn có thể được thay đổi trong tệp cấu hình nginx.conf bằng cách sử dụng lệnh client_body_temp_path. Theo mặc định, thư mục được đặt tên là tiền tố / client_body_temp.
 
-` --http-proxy-temp-path=path ` : Định nghĩa một thư mục để lưu trữ các tệp tạm thời với dữ liệu nhận được từ các máy chủ proxy. Sau khi cài đặt, thư mục luôn có thể được thay đổi trong tệp cấu hình nginx.conf bằng 
-cách sử dụng lệnh proxy_temp_path. Theo mặc định, thư mục được đặt tên là tiền tố / proxy_temp.
+` --http-proxy-temp-path=path ` : Định nghĩa một thư mục để lưu trữ các tệp tạm thời với dữ liệu nhận được từ các máy chủ proxy. Sau khi cài đặt, thư mục luôn có thể được thay đổi trong tệp cấu hình nginx.conf bằng cách sử dụng lệnh proxy_temp_path. Theo mặc định, thư mục được đặt tên là tiền tố / proxy_temp.
 
-` --http-fastcgi-temp-path=path ` : Định nghĩa một thư mục để lưu trữ các tệp tạm thời với dữ liệu nhận được từ các máy chủ FastCGI. Sau khi cài đặt, thư mục luôn có thể được thay đổi trong tệp cấu hình nginx.conf bằng cách 
-sử dụng lệnh fastcgi_temp_path. Theo mặc định, thư mục được đặt tên là tiền tố / fastcgi_temp.
+` --http-fastcgi-temp-path=path ` : Định nghĩa một thư mục để lưu trữ các tệp tạm thời với dữ liệu nhận được từ các máy chủ FastCGI. Sau khi cài đặt, thư mục luôn có thể được thay đổi trong tệp cấu hình nginx.conf bằng cách sử dụng lệnh fastcgi_temp_path. Theo mặc định, thư mục được đặt tên là tiền tố / fastcgi_temp.
 
-` --http-uwsgi-temp-path=path ` : Định nghĩa một thư mục để lưu trữ các tệp tạm thời với dữ liệu nhận được từ các máy chủ uwsgi. Sau khi cài đặt, thư mục luôn có thể được thay đổi trong tệp cấu hình nginx.conf bằng cách sử dụng 
-lệnh uwsgi_temp_path. Theo mặc định, thư mục được đặt tên là tiền tố / uwsgi_temp
+` --http-uwsgi-temp-path=path ` : Định nghĩa một thư mục để lưu trữ các tệp tạm thời với dữ liệu nhận được từ các máy chủ uwsgi. Sau khi cài đặt, thư mục luôn có thể được thay đổi trong tệp cấu hình nginx.conf bằng cách sử dụng lệnh uwsgi_temp_path. Theo mặc định, thư mục được đặt tên là tiền tố / uwsgi_temp
 
-` --http-scgi-temp-path=path ` : Định nghĩa một thư mục để lưu trữ các tệp tạm thời với dữ liệu nhận được từ các máy chủ SCGI. Sau khi cài đặt, thư mục luôn có thể được thay đổi trong tệp cấu hình nginx.conf bằng cách sử dụng 
-lệnh scgi_temp_path. Theo mặc định, thư mục được đặt tên là tiền tố / scgi_temp.
+` --http-scgi-temp-path=path ` : Định nghĩa một thư mục để lưu trữ các tệp tạm thời với dữ liệu nhận được từ các máy chủ SCGI. Sau khi cài đặt, thư mục luôn có thể được thay đổi trong tệp cấu hình nginx.conf bằng cách sử dụng lệnh scgi_temp_path. Theo mặc định, thư mục được đặt tên là tiền tố / scgi_temp.
 
 ` --without-http ` : Vô hiệu hóa máy chủ HTTP
 
@@ -162,6 +142,7 @@ lệnh scgi_temp_path. Theo mặc định, thư mục được đặt tên là t
 ` --with-mail && --with-mail=dynamic ` : Cho phép máy chủ proxy thư POP3 / IMAP4 / SMTP.
 
 ` --with-mail_ssl_module ` : Cho phép xây dựng một mô-đun bổ sung hỗ trợ giao thức SSL / TLS cho máy chủ proxy thư. Mô-đun này không được xây dựng theo mặc định. Thư viện OpenSSL là cần thiết để xây dựng và chạy mô-đun này.
+
 ` --without-mail_pop3_module ` : Vô hiệu hóa giao thức POP3 trong máy chủ proxy mail.
 
 ` --without-mail_imap_module ` : Vô hiệu hóa giao thức IMAP trong máy chủ proxy mail.
@@ -206,8 +187,7 @@ lệnh scgi_temp_path. Theo mặc định, thư mục được đặt tên là t
 
 ` --with-cpp=path ` : Đặt tên của bộ tiền xử lý C.
 
-` --with-cc-opt=parameters ` : Đặt các tham số bổ sung sẽ được thêm vào biến CFLAGS. Khi sử dụng thư viện PCRE hệ thống trong FreeBSD, nên chỉ định --with-cc-opt = "- I / usr / local / include". Nếu số lượng tệp được hỗ trợ bởi select () cần tăng lên, 
-nó cũng có thể được chỉ định ở đây như sau: --with-cc-opt = "- D FD_SETSIZE = 2048".
+` --with-cc-opt=parameters ` : Đặt các tham số bổ sung sẽ được thêm vào biến CFLAGS. Khi sử dụng thư viện PCRE hệ thống trong FreeBSD, nên chỉ định --with-cc-opt = "- I / usr / local / include". Nếu số lượng tệp được hỗ trợ bởi select () cần tăng lên, nó cũng có thể được chỉ định ở đây như sau: --with-cc-opt = "- D FD_SETSIZE = 2048".
 
 ` --with-ld-opt=parameters ` : Thiết lập các tham số bổ sung sẽ được sử dụng trong quá trình liên kết. Khi sử dụng thư viện PCRE hệ thống trong FreeBSD, --with-ld-opt = "- L / usr / local / lib" phải được chỉ định.
 
@@ -217,8 +197,7 @@ nó cũng có thể được chỉ định ở đây như sau: --with-cc-opt = "
 
 ` --with-pcre ` : Buộc sử dụng thư viện PCRE.
 
-` --with-pcre=path ` : Đặt đường dẫn đến các nguồn của thư viện PCRE. Phân phối thư viện (phiên bản 4.4 - 8.43) cần được tải xuống từ trang PCRE và trích xuất. Phần còn lại được thực hiện bởi nginx từ ./mình và thực hiện. Thư viện là cần thiết để hỗ trợ 
-các biểu thức chính quy trong chỉ thị vị trí và cho mô-đun ngx_http_rewrite_module.
+` --with-pcre=path ` : Đặt đường dẫn đến các nguồn của thư viện PCRE. Phân phối thư viện (phiên bản 4.4 - 8.43) cần được tải xuống từ trang PCRE và trích xuất. Phần còn lại được thực hiện bởi nginx từ ./mình và thực hiện. Thư viện là cần thiết để hỗ trợ các biểu thức chính quy trong chỉ thị vị trí và cho mô-đun ngx_http_rewrite_module.
 
 ` --with-pcre-opt=parameters ` : Thiết lập các tùy chọn xây dựng bổ sung cho PCRE.
 
