@@ -163,6 +163,7 @@ Mô-đun này được xây dựng tự động nếu nền tảng không xuất
 ` --with-stream_ssl_preread_module ` : Cho phép xây dựng mô-đun ngx_stream_ssl_preread_module cho phép trích xuất thông tin từ tin nhắn ClientHello mà không cần chấm dứt SSL / TLS. Mô-đun này không được xây dựng theo mặc định.
 
 ` --without-stream_limit_conn_module ` : Vô hiệu hóa việc xây dựng mô-đun ngx_stream_limit_conn_module giới hạn số lượng kết nối trên mỗi khóa, ví dụ: số lượng kết nối từ một địa chỉ IP duy nhất.
+
 ` --without-stream_access_module ` : Vô hiệu hóa việc xây dựng mô-đun ngx_stream_core_module cho phép giới hạn quyền truy cập vào một số địa chỉ khách hàng nhất định.
 
 ` --without-stream_geo_module ` : Vô hiệu hóa việc xây dựng mô-đun ngx_stream_core_module tạo các biến có giá trị tùy thuộc vào địa chỉ IP của máy khách.
