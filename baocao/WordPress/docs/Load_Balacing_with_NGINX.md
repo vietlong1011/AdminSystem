@@ -141,22 +141,22 @@ phục cho 1 web cụ thể.
 
 ### 4. Tích hợp với hệ thống Monitor
 
-### 4.1 NGINX
+#### 4.1 NGINX
 
 - Requests có lẽ là thông số đáng chú ý nhất trong 7 loại số liệu do NGINX cung cấp. NGINX khong cung cấp API để lấy ra các thông
 số cho từng trang web. Cách duy nhất là lấy dữ liệu test , sử Zabbix để monitor nginx ( tự viets 1 template) nhưng thiếu sự ổn định, và không đáp ứng được yêu cầu.
 
-### 4.2 HAProxy
+#### 4.2 HAProxy
 
 - HAProxy có sẵn định dạng CVS , các thông số HAProxy cung cấp rất dễ xem và dễ hiểu . Có thể sử dụng Datadog cho moniter HAProxy.
 
-### 5. NGINX tại sao không có monitoring ?
+#### 5. NGINX tại sao không có monitoring ?
 
 - Tất cả tính năng monitor còn thiếu trên ngĩn chỉ có 1 mục đích đó là lợi nhận. Tính năng này không bao h được cung cấp miễn phí
 Nếu muốn cần monitor trên NGINX và cần tích hợp JSON API , ta cần trả tiền cho NGINX Plus và giá khởi điểm là 1900$ cho mỗi server/năm.
 
 
-### 6. Vậy nên chọn NGINX hay HAProxy cho Load Balancer.
+#### 6. Vậy nên chọn NGINX hay HAProxy cho Load Balancer.
 
 - Còn rất nhiều yếu tố khác như hiệu năng và sự ổn định để quyết định lựa chọn NGINX hay HAProxy , tuy nhiên với một kinh phí eo 
 hẹp ta nên sử dụng HAProxy để vừa đảm bảo chi phí mà vẫn đáp ứng được yêu cầu .
