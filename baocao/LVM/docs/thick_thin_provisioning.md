@@ -77,7 +77,7 @@ lvcreate -V 50M --thin -n lv_thin_2 thinVG/thin_pool
 
 - Format 2 volume về định dạng ext4
 
-``
+```
 mkfs -t ext4 /dev/thinVG/lv_thin_1
 mkfs -t ext4 /dev/thinVG/lv_thin_2
 
