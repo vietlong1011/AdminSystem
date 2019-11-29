@@ -1,3 +1,1 @@
-### Tìm hiểu LVM
-
-[1.Tổng quan về LVM](./docs/Tong_quan_LVM.md)
+﻿### Tìm hiểu LVM[1.Tổng quan về LVM](./docs/Tong_quan_LVM.md)[2. PV - VG - LVdisplay](docs/pv-vg-lvdisplay.md)[3. Logical Volume Manager](docs/logical_volume_manager.md)[4.Thick - Thin Provisioning](docs/thick_thin_provisioning.md)[5. LVM Backup-Snapshot](docs/Lvm_backup_snapshot.md)
