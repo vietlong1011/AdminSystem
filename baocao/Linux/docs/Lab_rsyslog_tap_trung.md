@@ -14,7 +14,7 @@
 ![](../images/18.png)
 
 
-##### Để Log lưu thành từng mục riêng đối với log từng máy ta có thể:
+##### Để Log lưu thành từng mục riêng đối với log từng máy ta có thể thêm laahj sau vào cuối file cấu hình :
 - Lưu thư mục dưới tên IP của  rsyslog client
 ```
 $template RemoteServer, "/var/log/%fromhost-ip%/%SYSLOGFACILITY-TEXT%.log"
