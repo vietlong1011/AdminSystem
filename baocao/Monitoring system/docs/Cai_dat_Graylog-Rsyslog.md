@@ -135,7 +135,7 @@ root_password_sha2 = 82fba6cc9259b2198e0d30ed03f82eaac290110cdf280e4f1a80d9fecf3
 
 
 
-- Cài đặt Rsyslog và thực hiện đẩy qua cổng 8514.
+- Cài đặt Rsyslog và thực hiện đẩy qua cổng 8514 ( trong phần cổng lắng nghe UDP và TCP của /etc/rsyslog.conf)
 
 https://github.com/letran3691/Graylog
 https://kifarunix.com/install-graylog-3-0-on-centos-7/
