@@ -134,7 +134,7 @@ mount /dev/vg2/striped_lv /root/striped
 
 - Kiểm tra cài đặt bằng lệnh ` lvs --segments ` . Nếu thấy type=raid1 tức là đã thành công
 
-![](../images/34.png0
+![](../images/34.png)
 
 
 
