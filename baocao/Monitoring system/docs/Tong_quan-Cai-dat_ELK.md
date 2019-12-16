@@ -209,7 +209,7 @@ prospectors:
 registry_file: /var/lib/filebeat/registry
 output:
 logstash:
-    hosts: ["10.10.10.190:5044"]
+    hosts: ["10.2.9.50:5044"]
     worker: 2
     bulk_max_size: 2048
 logging:
