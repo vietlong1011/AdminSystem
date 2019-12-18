@@ -76,6 +76,7 @@ sysctl -p
 
 - Cài đặt java và Elasticsearch 
 
+```
 yum install java-1.8.0-openjdk-headless
 java -version
 
