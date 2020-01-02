@@ -1,0 +1,19 @@
+### 5.restart_service.sh
+
+### Dịch script
+
+- Kiểm tra người dùng có phải tmss không
+	- Nếu là tmss thì tiếp tục thực hiện script
+	- Nếu không phải là tmss thì thoát khỏi script
+
+- Tạo biến Date1= Checkout_dir : năm tháng ngày
+- Tạo biến process2 : service.api...jar
+- Lấy PID của tiến trình process2
+- Kill -9 để dừng ngay lập tức tiến trình process2
+- Truy cập vào `/opt/release/service` . Sử dụng lệnh  ` nohup ` run file service.api ...jar
+- Gửi log vào `/opt/release/serice/nohup.out ` . Chuyển toàn bộ thông tin standard error sang standard output bình thường
+- Lấy PID của process , thông báo kết thúc deploy
+
+### Nội dung script
+
+- Chạy file jar trong thư mục `/opt/release/service `

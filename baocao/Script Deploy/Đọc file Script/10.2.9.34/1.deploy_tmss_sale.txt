@@ -1,0 +1,30 @@
+### 1.deploy_tmss_sale.sh
+
+### Dịch script
+
+- Kiểm tra người dùng có phải tmss hay không
+	- Nếu là tmss thì cho thực hiện script
+	- Nếu không phải là tmss thì thoát script
+
+- Tạo biến process 
+- Date1 = Checkout_dir = year , month , day 
+- Date = năm , tháng , ngày , giờ , phút
+
+- Tạo thư mục backup ` /opt/backup/sale `
+- Copy dữ liệu từ `/opt/release/sale ` sang `/opt/backup/sale`
+- Copy dữ liệu từ `/opt/newsource/sale/checkout_dir ` sang `/opt/release/sale` 
+- Copy dữ liệu từ `/opt/backup/sale/application-gitbacci.properties ` sang `/opt/release/sale `
+
+- Truy cập vào ` /opt/release/sale/ ` và dùng lệnh nohup thực hiện run file .jar
+- Tất cả các log thực hiện lệnh nohup sẽ được gửi về ` /opt/release/sale/nohup.out` .Chuyển thông báo error về dạng output bình thường và lưu tại đây
+
+- Lấy PID của process 
+- Thông báo kết thúc chương trình
+
+#### Nội dung script
+
+- Backup file `/opt/release/sale` sang `/opt/backup/sale `
+- Đẩy code mới từ ` /opt/newsource/sale` vào `/opt/release/sale`
+- Copy file `/opt/backup/sale/datedeploy/sale/application-gitlabci.properties  ` sang `/opt/release/sale` 
+- Thực hiện run file jar trong `/opt/release/sale ` và gửi log về `/opt/release/sale/nohup.out `
+
