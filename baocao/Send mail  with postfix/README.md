@@ -6,6 +6,6 @@
 
 [3. Script sendmail](docs/3.script_sendmail.md)
 
-[4. Sử dụng crontab để lập lịch sendmail](docs/4.su_dung_crontab_de_lap_lich_gui_mail.md)
+[4. Sử dụng crontab để lập lịch sendmail - Gửi gamil khi start server](docs/4.su_dung_crontab_de_lap_lich_gui_mail.md)
 
 
