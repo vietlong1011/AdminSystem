@@ -12,7 +12,7 @@ yum install gcc kernel-headers kernel-devel
 yum install keepalived
 ```
 
-- Sửa  file cấu hình ` /etc/system.conf` 
+- Để máy chủ định nghĩa IP  chứ ko phải là card mạng định nghĩ thì tao sửa  file cấu hình ` /etc/sysctl.conf` 
 
 ```
 net.ipv4.ip_nonlocal_bind = 1
