@@ -181,4 +181,18 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 ### 9 Test
 - Truy cập vào http://ip(host_name)/wp-admin
 
+### 10 Check lỗi FTP
+
+- Mở file `wp-config.php ` trong thư mục ` /var/www/html/example.com `
+- Thêm các lệnh sau vào `wp-config.php`
+```
+define( 'FTP_USER', 'Quang' );
+define( 'FTP_PASS', 'Hse@123a' );
+define( 'FTP_HOST', '10.2.9.52' );
+define('FS_METHOD','direct');
+
+```
+- Cấp quyền cho thư mục ` chmod 777 /yourwebsitename/public/wp-content/plugins/`
+
+
 
