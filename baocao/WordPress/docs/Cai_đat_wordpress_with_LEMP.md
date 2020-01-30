@@ -52,7 +52,7 @@ systemctl enable php-fpm.service
 
 ### 3. Cấu hình để NGINX hoạt động với PHP 7.
 #### 3.1 Chỉnh worker_processes bằng với số processor VPS 
-- Xem thông tin VPS trong ` /cat/proc/cpuinfo `
+- Xem thông tin VPS trong ` cat/proc/cpuinfo ` . Xem ` processor `	
 - Chỉnh thông số worker_processes trong ` /etc/nginx/nginx.conf `
 - Set worker_processes = processes
 
