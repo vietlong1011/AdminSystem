@@ -147,7 +147,7 @@ systemctl start filebeat
 
 ```
 
-
+https://www.digitalocean.com/community/tutorials/how-to-install-apache-kafka-on-centos-7
 
 
 
