@@ -88,7 +88,7 @@ phpinfo();
 ![](../images/12.png)
 
 ```
-try_files $uri $uri/ /index.php?q=$uri&amp;$args;
+try_files $uri $uri/ /index.php?q=$uri&amp$args;
 $document_root
 ```
 
