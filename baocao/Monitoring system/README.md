@@ -16,6 +16,14 @@
 
 [9.Zookeeper](docs/zookeeper.md)
 
+[10. Tổng quan về Nagios core](docs/10.Tong_quan_Nagios_core.md)
+
+[11. Cài dặt Nagios vs Host giám sát](docs/11.Cai_dat_nagios_vs_host.md)
+
+[12. Giám sát Mysql Nagios](docs/12.Giam_sat_Mysql_nagios.md)
+
+[13. Cảnh báo Mail Nagios](docs/13.Canh_bao_mail_Nagios.md)
+
 
 
 
