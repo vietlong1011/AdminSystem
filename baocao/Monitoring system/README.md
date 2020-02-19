@@ -24,6 +24,8 @@
 
 [13. Cảnh báo Mail Nagios](docs/13.Canh_bao_mail_Nagios.md)
 
+[14. Cài đặt Icinga2 và Icingaweb2](docs/14.Cai_dat_icinga2_vs_icingaweb2.md)
+
 
 
 
