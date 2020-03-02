@@ -26,6 +26,8 @@
 
 [14. Cài đặt Icinga2 và Icingaweb2](docs/14.Cai_dat_icinga2_vs_icingaweb2.md)
 
+[15. Notification Icinga2-Telegram](docs/15.notification_Icinga2_with_telegram.md)
+
 
 
 
