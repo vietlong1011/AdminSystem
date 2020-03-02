@@ -1,3 +1,6 @@
+### Filter log
+` sed -n  '/2020-02-25 11:11/,/2020-02-25 12:12/p' /root/drugstore-api.log > h1.log `
+
 VI 
 	VI là một bộ ( trình )chỉnh sửa các file trong linux được ưa dùng nhất vì VI sử dụng ít tài nguyên và được cài đặt mặc định trong linux.
 	VI có 2 chế độ làm việc chính:
