@@ -5,3 +5,5 @@
 [3.Mảng và Hàm](docs/3.Mảng_và_Hàm.md)
 
 [4. Script WordPress](docs/script_wordpress.md)
+
+[5. Script loc log theo time](docs/5.loc_log_theo_time.md)
