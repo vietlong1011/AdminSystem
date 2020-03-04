@@ -28,6 +28,10 @@
 
 [15. Notification Icinga2-Telegram](docs/15.notification_Icinga2_with_telegram.md)
 
+[16. Cài đặt giám sát các host Client_Master trong icinga2](docs/16.Setup_Master-Client_icinga2.md)
+
+[17. Notification trong Master_Client bằng Telegram](docs/17.Notification_master-client_icinga2_telegram.md)
+
 
 
 
