@@ -125,7 +125,7 @@ password_secret = 5KnU84m0zxT2x90e1JMUTxoREdkEFoZBKsV2nmpe554s4vTBMCNIdhcdugFEQZ
 root_password_sha2 = 82fba6cc9259b2198e0d30ed03f82eaac290110cdf280e4f1a80d9fecf3de524
 
 ```
-- Chuyển địa chỉ Http_bind_address để cho truy caapjj graylog server
+- Chuyển địa chỉ Http_bind_address để cho truy cập graylog server
 
 ![](../images/20.png)
 
@@ -133,11 +133,17 @@ root_password_sha2 = 82fba6cc9259b2198e0d30ed03f82eaac290110cdf280e4f1a80d9fecf3
 
 ![](../images/21.png)
 
-
+- Khởi động Graylog-Server
+```
+systemctl daemon-reload
+systemctl enable graylog-server.service
+systemctl start graylog-server.service
+systemctl status graylog-server.service
+```
 
 - Cài đặt Rsyslog và thực hiện đẩy qua cổng 8514 ( trong phần cổng lắng nghe UDP và TCP của /etc/rsyslog.conf)
 
-https://github.com/letran3691/Graylog
+
 https://kifarunix.com/install-graylog-3-0-on-centos-7/
 https://github.com/letran3691/Graylog
 
