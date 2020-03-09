@@ -107,7 +107,7 @@ yum install pwgen
 ```
 
 - Tạo khóa bí mật bằng cách chạy lệnh:  ` pwgen -N 1 -s 96 `
-- Băm mật khẩu thành sha256 : ` echo -n "hse@12345" | sha256sum  `
+- Băm mật khẩu thành sha256 : ` echo -n "hse@12345" | sha256sum | cut -d" " -f1 `
 
 - Kết quả thu được 
 	- 5KnU84m0zxT2x90e1JMUTxoREdkEFoZBKsV2nmpe554s4vTBMCNIdhcdugFEQZJWo5JtjWB37zdarkL8iTSk6c24GCdAasCG
