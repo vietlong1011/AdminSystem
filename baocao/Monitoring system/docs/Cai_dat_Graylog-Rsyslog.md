@@ -141,6 +141,14 @@ systemctl start graylog-server.service
 systemctl status graylog-server.service
 ```
 
+
+- Truy cập web của graylog ` http://10.2.9.50:9000 `
+	- user : admin
+	- password : hse@12345 ( Mật khẩu root đã khai báo, được băm ở phía trên )
+	
+![](../images/59.png)
+
+
 - Cài đặt Rsyslog và thực hiện đẩy qua cổng 8514 ( trong phần cổng lắng nghe UDP và TCP của /etc/rsyslog.conf)
 
 
