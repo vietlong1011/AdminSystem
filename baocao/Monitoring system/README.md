@@ -2,37 +2,39 @@
 
 [2. Cài đặt Telegraf - Influxdb - Grafana ](docs/Cai_dat_Telegraf-influxdb-grafana.md)
 
-[3. Tổng quan vè Graylog ](../Linux/docs/log_syslog_rsyslog.md)
+[3. Tổng quan về log - syslog - rsyslog](../Linux/docs/log_syslog_rsyslog.md)
 
-[3. Tổng quan vè Graylog ](docs/Tong_quan_Gray_Log.md)
+[4. LAB cài log tập chung với MySQL và NGINX ](../Linux/docs/Lab_rsyslog_tap_trung.md)
 
-[4. Cài đặt Graylog](docs/Cai_dat_Graylog-Rsyslog.md)
+[5. Tổng quan vè Graylog ](docs/Tong_quan_Gray_Log.md)
 
-[5. Tìm hiểu và cài đặt ELK Elasticsearch - Logstash - Kibana](docs/Tong_quan-Cai-dat_ELK.md)
+[6. Cài đặt Graylog](docs/Cai_dat_Graylog-Rsyslog.md)
 
-[6. Cài đặt elasticsearch cluster](docs/Cai_dat_elasticsearch_cluster.md)
+[7. Tìm hiểu và cài đặt ELK Elasticsearch - Logstash - Kibana](docs/Tong_quan-Cai-dat_ELK.md)
 
-[7. Cài dặt Kafka làm cache](docs/Cai_dat_Kafka_lam_cache.md)
+[8. Cài đặt elasticsearch cluster](docs/Cai_dat_elasticsearch_cluster.md)
 
-[8. Tổng quan về logstash](docs/Tong_quan-logstash.md)
+[9. Cài dặt Kafka làm cache](docs/Cai_dat_Kafka_lam_cache.md)
 
-[9.Zookeeper](docs/zookeeper.md)
+[10. Tổng quan về logstash](docs/Tong_quan-logstash.md)
 
-[10. Tổng quan về Nagios core](docs/10.Tong_quan_Nagios_core.md)
+[11.Zookeeper](docs/zookeeper.md)
 
-[11. Cài dặt Nagios vs Host giám sát](docs/11.Cai_dat_nagios_vs_host.md)
+[12. Tổng quan về Nagios core](docs/10.Tong_quan_Nagios_core.md)
 
-[12. Giám sát Mysql Nagios](docs/12.Giam_sat_Mysql_nagios.md)
+[13. Cài dặt Nagios vs Host giám sát](docs/11.Cai_dat_nagios_vs_host.md)
 
-[13. Cảnh báo Mail Nagios](docs/13.Canh_bao_mail_Nagios.md)
+[14. Giám sát Mysql Nagios](docs/12.Giam_sat_Mysql_nagios.md)
 
-[14. Cài đặt Icinga2 và Icingaweb2](docs/14.Cai_dat_icinga2_vs_icingaweb2.md)
+[15. Cảnh báo Mail Nagios](docs/13.Canh_bao_mail_Nagios.md)
 
-[15. Notification Icinga2-Telegram](docs/15.notification_Icinga2_with_telegram.md)
+[16. Cài đặt Icinga2 và Icingaweb2](docs/14.Cai_dat_icinga2_vs_icingaweb2.md)
 
-[16. Cài đặt giám sát các host Client_Master trong icinga2](docs/16.Setup_Master-Client_icinga2.md)
+[17. Notification Icinga2-Telegram](docs/15.notification_Icinga2_with_telegram.md)
 
-[17. Notification trong Master_Client bằng Telegram](docs/17.Notification_master-client_icinga2_telegram.md)
+[18. Cài đặt giám sát các host Client_Master trong icinga2](docs/16.Setup_Master-Client_icinga2.md)
+
+[19. Notification trong Master_Client bằng Telegram](docs/17.Notification_master-client_icinga2_telegram.md)
 
 
 
