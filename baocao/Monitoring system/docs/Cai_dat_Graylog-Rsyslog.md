@@ -157,22 +157,105 @@ https://github.com/letran3691/Graylog
 
 
 
+### C. Thu thập Log qua Syslog
+### 1. Setup thời gian 
+
+- Đồng bộ thời gian giữa các host vs nhau bằng NTP , và set timezone
+```
+yum install -y ntp
+
+timedatectl set-timezone Asia/Ho_Chi_Minh
+
+```
+
+- Cài đặt thời gian đồng bộ giữa host và web (Graylog_server)
+```
+
+vi /etc/graylog/server/server.conf
+
+root_timezone = Asia/Ho_Chi_Minh
+
+```
+
+### 2. Add thêm host giám sát 
+```
+echo '*.*  @10.2.9.50:1514;RSYSLOG_SyslogProtocol23Format' >> /etc/rsyslog.conf
+
+systemctl restart rsyslog
+
+```
+- Trong đó :
+	- 10.2.9.50 : Địa chỉ IP của Graylog-server
+	- 1514 : Port khi connect tới Graylog-server
+	- Ngoài ra , muốn thu thập log của chính Graylog-server ta cũng chỉ cần thêm câu lệnh trên vào cuối file trong `/etc/rsyslog.conf`
+
+
+### 3. Cấu hình Web interface trên Graylog-Server
+- Input và hiển thị log trên web
+
+![](../images/60.png)
+
+
+![](../images/61.png)
+
+
+![](../images/62.png)
+
+
+- Tương tự , có bao nhiêu host ta muốn hiển thị trên web thì input các host cần giám sát vào
+
+
+### 4. Alert ( Telegram)
+### 4.1 Tạo chat_bot và lấy ID group chat , vs Token
+
+### 4.1.1. Tạo Bot cho nhóm
+- B1 : Tìm và chat BotFather
+- B2 : /newbot
+- B3 : Đặt tên cho Bot (ví dụ " hsekma")
+- B4 : Hoàn tất việc đăng kí bằng " hsekma_bot"
+- Sau khi hoàn tất việc đăng kí Bot trong Telegram , BotFather sẽ sinh ra một token (ví dụ: TOKEN = 1076399516:AAH3BIWNzQrA1L5eGaSbclNnc0SkKAYoRcE)
+
+### 4.1.2. Thêm Bot vào nhóm chat 
+- ` /start ` : Start Bot trong nhóm chat
+- ` https://api.telegram.org/bot[TOKEN]/getUpdates ` : Truy cập vào links và lấy  được ID của nhóm chat (ví dụ: -441326255 )
+
+### 4.1.3. Test coi Bot Telegram đã hoạt động hay chưa
+- Qua API : ` https://api.telegram.org/bot[TOKEN]/sendMessage?chat_id=[CHAT_ID]&text=[MY_MESSAGE_TEXT]` 
+- Sử dụng Curl  ` https://api.telegram.org/bot[TOKEN]/sendMessage?chat_id=[CHAT_ID]&text=[MY_MESSAGE_TEXT] `
+
+
+### 4.2 Tạo Notifications
+
+![](../images/63.png)
+
+
+![](../images/64.png)
+
+
+![](../images/65.png)
+
+
+```
+<a href="${stream_url}">${stream.title}</a>: ${alert_condition.title}
+<code>${foreach backlog message}
+Message source : ${message.source}
+Message : ${message.message}
+Timestamp : ${message.timestamp}
+${end}</code>
+
+```
+
+
+### 4.3 Event gửi cảnh báo
+
+![](../images/66.png)
 
 
 
+![](../images/67.png)
 
 
-
-
-
-
-
-
-
-
-
-
-
+![](../images/68.png)
 
 
 
