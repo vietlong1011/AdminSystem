@@ -6,7 +6,7 @@
 
 [ 3.Log trong PostgreSQL](docs/3.log_trog_PostgreSQL.md)
 
-[ 4. Đồng bộ và Backup trong PostgreSQL](/docs/4.Dong_bo_va_backup_PostgreSQL.md)
+[ 4. Đồng bộ và Backup trong PostgreSQL](docs/4.Dong_bo_va_backup_PostgreSQL.md)
 
 [ 5. Replication Master-Slave](docs/5.Replication-Master-Slave.md)
 
