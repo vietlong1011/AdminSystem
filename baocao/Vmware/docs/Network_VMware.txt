@@ -1,34 +1,29 @@
-Switch ảo :
-	Switch ảo hay còn được gọi là mạng ảo có tên VMnet0, VMnet1,VMnet2....
-	Trên Windows cho phép tạo 20 switch ảo , trên Linux cho phép tạo 255 switch ảo .
-	Switch ảo trên Windows có vô hạn các cổng kết nôi với host còn trên Linux là 32 cổng kết nối host.
+### 1.Switch ảo :
+- Switch ảo hay còn được gọi là mạng ảo có tên VMnet0, VMnet1,VMnet2....
+- Trên Windows cho phép tạo 20 switch ảo , trên Linux cho phép tạo 255 switch ảo .
+- Switch ảo trên Windows có vô hạn các cổng kết nôi với host còn trên Linux là 32 cổng kết nối host.
 	
-	Khi cài mạng VMnet thì trên máy thật sẽ tạo ra các card mạng ảo tương ứng . Dùng để kết nối trực tiếp máy thật với Switch ảo giúp 
-	máy thật và máy ảo có thể trao đổi dữ liệu với nhau.
-	VMnet0 sẽ kết nối trực tiếp với card mạng vật lý thông qua cơ chế bắc cầu (bridged) nên không tạo ra card mạng mới.
-	VMnet8 mặc địch sẽ sử dụng cơ chế NAT .
-	Các VMnet khác khi được thêm vào sẽ sử dụng cơ chế Host-only.
+- Khi cài mạng VMnet thì trên máy thật sẽ tạo ra các card mạng ảo tương ứng . Dùng để kết nối trực tiếp máy thật với Switch ảo giúp máy thật và máy ảo có thể trao đổi dữ liệu với nhau.
+- VMnet0 sẽ kết nối trực tiếp với card mạng vật lý thông qua cơ chế bắc cầu (bridged) nên không tạo ra card mạng mới.
+- VMnet8 mặc địch sẽ sử dụng cơ chế NAT .
+- Các VMnet khác khi được thêm vào sẽ sử dụng cơ chế Host-only.
 	
-Card mạng ảo trên máy ảo :
-	Khi tạo máy ảo, các card mạng ảo sẽ được tạo ra cho máy ảo đó và hiển thị trên hệ điều hành.
-	Mỗi máy ảo có thể hỗ trợ tới 10 card mạng ảo.
-	Khi copy máy ảo thì nên thay đổi địa chỉ MAC.
+- Card mạng ảo trên máy ảo :
+	- Khi tạo máy ảo, các card mạng ảo sẽ được tạo ra cho máy ảo đó và hiển thị trên hệ điều hành.
+	- Mỗi máy ảo có thể hỗ trợ tới 10 card mạng ảo.
+	- Khi copy máy ảo thì nên thay đổi địa chỉ MAC.
 	
 	
-DHCP ảo của VMnet.
-	DHCP ảo cung cấp địa chỉ ip cho các host có kết nối với Switch ảo không có tính năng Bridge.
+- DHCP ảo của VMnet.
+	- DHCP ảo cung cấp địa chỉ ip cho các host có kết nối với Switch ảo không có tính năng Bridge.
 	
-LAN Segment.
-	Kết nối các host với nhau thành từng Lan segment. Các host trong LAN segment không có tính năng của DHCP cũng như không 
-	thể kết nối đc với máy thật.
+- LAN Segment.
+	- Kết nối các host với nhau thành từng Lan segment. Các host trong LAN segment không có tính năng của DHCP cũng như không thể kết nối đc với máy thật.
 	
-Các chế độ hoạt động cơ bản của VMnet.
+### 2.Các chế độ hoạt động cơ bản của VMnet.
 
-A. Bridge : Card mạng trên máy ảo được kết nối với VMnet0. VMnet0 kết nối trực tiếp với card mạng vật lý của máy thật. 
-			Máy ảo sẽ kết nối với internet thông qua card mạng vật lý và có cùng lớp mạng.
-			Các host có card bridge chỉ có thể kết nối với các card thật trên máy thật.
+- ` A. Bridge ` : Card mạng trên máy ảo được kết nối với VMnet0. VMnet0 kết nối trực tiếp với card mạng vật lý của máy thật. Máy ảo sẽ kết nối với internet thông qua card mạng vật lý và có cùng lớp mạng.Các host có card bridge chỉ có thể kết nối với các card thật trên máy thật.
 			
-B. NAT(Network address translation) : Card mạng sẽ được kết nối với VMnet8. VMnet8 cho phép card mạng này kết nới internet thông qua card mạng
-									 vật lý thông qua cơ chế NAT. 
+- ` B. NAT(Network address translation) ` : Card mạng sẽ được kết nối với VMnet8. VMnet8 cho phép card mạng này kết nới internet thông qua card mạng vật lý thông qua cơ chế NAT. 
 									 
-C. Host-only : Card mạng kết nối với VMnet1. Ở chế độ này card mạng không có kết nối nào với card mạng vật lý hay internet thông qua máy thật. 
+- ` C. Host-only ` : Card mạng kết nối với VMnet1. Ở chế độ này card mạng không có kết nối nào với card mạng vật lý hay internet thông qua máy thật. 
