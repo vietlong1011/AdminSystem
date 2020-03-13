@@ -36,6 +36,8 @@
 
 [19. Notification trong Master_Client bằng Telegram](docs/17.Notification_master-client_icinga2_telegram.md)
 
+[20. ADD service icinga2  CHECK_SQL ....](docs/20.ADD_service_icinga2_CHECKSQL.md)
+
 
 
 
