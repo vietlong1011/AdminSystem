@@ -10,3 +10,4 @@
 
 [ 5. Replication Master-Slave](docs/5.Replication-Master-Slave.md)
 
+[ 6. Script backup DB](docs/6.script_backup_db.md)
