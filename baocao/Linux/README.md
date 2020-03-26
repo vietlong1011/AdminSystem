@@ -44,7 +44,7 @@
 
 [13. History trong việc kiểm tra hệ thống](docs/13.history.md)
 
-[14. Sử dụng Crontab](../Send mail with postfix/docs/4.su_dung_crontab_de_lap_lich_gui_mail.md)
+[14. Sử dụng Crontab](/docs/4.su_dung_crontab_de_lap_lich_gui_mail.md)
 
 
 
