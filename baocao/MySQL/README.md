@@ -6,7 +6,7 @@
 
 [4. Truy vấn trong MySQL ](docs/Truy_vấn_mysql.md) 
 
-[5. MySQL Replication Master-Slave   -   Replication MSSQL](docs/Mysql_replication_master_slave.md)
+[5. MySQL Replication Master-Slave ](docs/Mysql_replication_master_slave.md)
 
-[6. Cài đặt MySQL Replication Master-Slave](setup/Cai_dat_master_slave.md)
+[6. Cài đặt MySQL Replication Master-Slave  -   Replication MSSQL](setup/Cai_dat_master_slave.md)
 
