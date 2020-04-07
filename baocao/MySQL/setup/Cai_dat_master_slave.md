@@ -1,3 +1,5 @@
+### A Master_Slave on Linux
+
 ### 1. Xây dựng LAB  Master-Slave
 - Sử dụng 2 server , 1 server giữ vai trò server Master và 1 server giữ vai trò server Slave
 - Cài đặt MySQL bản 8. trở lên.
@@ -84,3 +86,8 @@ Mysql>	CHANGE MASTER TO
 ` mysql> START SLAVE `
 
 ### 3.Test 
+
+
+### B. Replication Window
+
+https://docs.microsoft.com/en-us/sql/relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers?view=sql-server-ver15
