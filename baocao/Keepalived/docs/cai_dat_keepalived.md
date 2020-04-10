@@ -47,3 +47,6 @@ sang 1 server khác)
 	khẩu thường là 8 kí tự 
 	- track_script : Đoạn chạy script.
 
+
+
+https://www.codeproject.com/Articles/1272428/MySQL-Auto-Failover-using-Keepalived-on-CentOS
