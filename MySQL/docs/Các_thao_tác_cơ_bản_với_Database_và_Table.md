@@ -6,6 +6,23 @@ mysql -u DatabaseUser -p DatabaseName < BackupDatabase.sql
 
 mysqldump -u DatabaseUser -p DatabaseName > BackupDatabase.sql
 ```
+### Xuất dữ liệu ra file CSV
+- Thêm dòng lệnh ` secure-file-priv = "" ` vào file `/etc/my.cnf`
+
+- Cấp quyền cho mysql trong thư mục (ở đây là tmp ) 
+` chmod -R 1777 /tmp `
+- Trao quyền cho mysql 
+` chown mysql:mysql /tmp `
+
+
+- Gửi các câu truy vấn ra dạng file csv
+```
+select * from SV 
+into outfile '/tmp/tesst1.csv';
+```
+- Trong đó SV là tên của table , * là lấy tất cả các trường  , /tmp/tesst1.csv là đường dẫn 
+
+
 
 
 > Trên CentOS, toàn bộ file raw database được lưu trong thư mục `var/lib/mysql ` 
