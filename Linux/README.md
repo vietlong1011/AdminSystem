@@ -46,11 +46,12 @@
 
 [14. Sử dụng Crontab](docs/14.crontab.md)
 
-[15. Một số lệnh trong Deploy - Linux cơ bản]
+### 15. Một số lệnh trong Deploy - Linux cơ bản
+[ 15.1 Lệnh AWK GREP SED ](docs/15.1.lenh_awk_grep_sed.md)
 
-	- [ 15.1 Lệnh AWK GREP SED ](docs/15.1.lenh_awk_grep_sed.md)
-	- [ 15.2 Lệnh SSH SCP PGREP](docs/15.2.Command_ssh_scp_vs_pgrep.md)
-	- [ 15.3 Lệnh TCPDUMP NETSTAT](docs/15.3.Command_network_tcpdump_netstat.md)
+[ 15.2 Lệnh SSH SCP PGREP](docs/15.2.Command_ssh_scp_vs_pgrep.md)
+
+[ 15.3 Lệnh TCPDUMP NETSTAT](docs/15.3.Command_network_tcpdump_netstat.md)
 
 
 
