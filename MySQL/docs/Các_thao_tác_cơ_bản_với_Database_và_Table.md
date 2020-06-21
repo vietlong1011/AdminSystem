@@ -5,6 +5,11 @@
 mysql -u DatabaseUser -p DatabaseName < BackupDatabase.sql
 
 mysqldump -u DatabaseUser -p DatabaseName > BackupDatabase.sql
+
+Note : Import Database
+mysql -u root -p
+SET GLOBAL log_bin_trust_function_creators = 1;
+
 ```
 ### Xuất dữ liệu ra file CSV
 - Thêm dòng lệnh ` secure-file-priv = "" ` vào file `/etc/my.cnf`
