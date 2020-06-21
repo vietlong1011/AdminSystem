@@ -22,6 +22,16 @@ mysql> UPDATE mysql.user SET authentication_string = PASSWORD('MyNewPassword')
 mysql> FLUSH PRIVILEGES;
 mysql> quit
 
+5.1 (note) .if you in skip-grant-tables mode
+in mysqld_safe:
+	UPDATE mysql.user SET authentication_string=null WHERE User='root';
+	FLUSH PRIVILEGES;
+	exit;
+and then, in terminal:
+mysql -u root
+in mysql:
+	ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'yourpasswd';
+
 *** Edit ***
 As mentioned my shokulei in the comments, for 5.7.6 and later, you should use 
    mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass';
