@@ -40,6 +40,9 @@
 
 [21. SNMP check PID vs Disk_Space Windows](docs/21.snmp_pid_disk_space.md)
 
+[21. Cắt log](docs/22.Logrotate.md)
+
+
 
 
 
