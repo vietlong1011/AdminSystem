@@ -33,7 +33,7 @@
 
 ##### Để cài đặt cần sử dụng thêm lệnh ` yum --enablerepo=remi,remi-php72 install ten_module` 
 
-##### Cài một số modul php phổ biến : ` yum --enablerepo=remi,remi-php72 install php-opcache php-pecl-apcu php-cli php-pear php-pdo php-mysqlnd php-pgsql php-pecl-mongodb php-pecl-redis php-pecl-memcache php-pecl-memcached php-gd php-mbstring php-mcrypt php-xml ` 
+##### Cài một số modul php phổ biến : ` yum --enablerepo=remi,remi-php72 install php-opcache php-pecl-apcu php-cli php-pear php-pdo php-mysqlnd php-pgsql php-pecl-mongodb php-pecl-redis php-pecl-memcache php-pecl-memcached php-gd php-mbstring php-mcrypt php-xml php-fpm ` 
 
 #### 2.1 Một số Systemctl với NGINX với PHP-FPM
 - NGINX 
